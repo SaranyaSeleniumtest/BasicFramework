@@ -18,6 +18,7 @@ import com.aventstack.extentreports.Status;
 
 
 
+
 public class ActionEngine {
 	public WebDriverWait Wait;
 
@@ -134,11 +135,21 @@ public class ActionEngine {
 
 		}
 	}
-	public void AssertionEquals(WebElement ele,String expectedval,String customerrmsg,String Fieldname) {
-		boolean valmatch=false;
-		
-		Assert.assertEquals(ele.getText(),expectedval,customerrmsg);
+
+	
+	public void assertEqualsString_custom(String expvalue, String actualValue, String locatorName){
+		try {
+			if(actualValue.equals(expvalue)) {
+				ExtentFactory.getinstance().getextent().log(Status.PASS, "String Assertion is successful on field "+ locatorName + " Expected value was: "+ expvalue + " actual value is: "+actualValue);
+			}else {
+				ExtentFactory.getinstance().getextent().log(Status.FAIL, "String Assertion FAILED on field "+ locatorName + " Expected value was: "+ expvalue + " actual value is: "+actualValue);
+				Assert.assertTrue(false);
+			}
+		} catch (Exception e) {
+			Assert.assertTrue(false, e.toString());
+		}
 	}
+
 
 
 	public String gettext(WebElement ele,String fieldname) {

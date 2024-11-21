@@ -18,18 +18,16 @@ import com.OrangeHRM.pageobjects.Shoppingcartpage;
 import com.aventstack.extentreports.Status;
 import com.testBase.testBase_old;
 
-public class Addproduct extends testBase_old {
-//TestCase details
-//	1. Launch browser
-//	2. Navigate to url 'http://automationexercise.com'
-//	3. Verify that home page is visible successfully
-//	4. Click 'Products' button
-//	5. Hover over first product and click 'Add to cart'
-//	6. Click 'Continue Shopping' button
-//	7. Hover over second product and click 'Add to cart'
-//	8. Click 'View Cart' button====>
-//	9. Verify both products are added to Cart
-//	10. Verify their prices, quantity and total price
+public class SearchProductAndAddProduct extends testBase_old {
+
+	//	1. Launch browser
+	//	2. Navigate to url 'http://automationexercise.com'
+	//	3. Verify that home page is visible successfully
+	//	4. Click on 'Products' button
+	//	5. Verify user is navigated to ALL PRODUCTS page successfully
+	//	6. Enter product name in search input and click search button
+	//	7. Verify 'SEARCHED PRODUCTS' is visible
+	//	8. Verify all the products related to search are visible
 
 	Loginpage lp= new Loginpage();
 	AllTabsPage tabs= new AllTabsPage();
@@ -38,11 +36,10 @@ public class Addproduct extends testBase_old {
 	Shoppingcartpage shopcart= new Shoppingcartpage();
 	ProductCheckoutpage pdtcheckout= new ProductCheckoutpage();
 	
-	
-	ExcelOperations excelopt = new ExcelOperations("AddProduct");
+	ExcelOperations excelopt = new ExcelOperations("SearchProduct");
 
-	@Test(dataProvider="addproduct")
-	public void TC04_VerifyaddProduct(Object obj) throws IOException, InterruptedException {
+	@Test(dataProvider="search")
+	public void TC03_searchpdt(Object obj) throws IOException, InterruptedException {
 		HashMap<String,String> datatable= (HashMap<String, String>) obj;
 		try {
 			lp.loginapp(datatable);
@@ -50,6 +47,9 @@ public class Addproduct extends testBase_old {
 
 			tabs.Click_Pdt();
 			Assert.assertTrue(pdt.verifytitle(),"Product Title mismatched");
+			pdt.searchpdt(datatable);
+			Assert.assertEquals(pdt.validatepdt(),datatable.get("Productname"),"Product mismatched");
+//
 			pdt.selectproduct(1);
 			
 			Assert.assertEquals(addpdt.getproductconfimation(),datatable.get("Productconfirmmsg"));
@@ -73,7 +73,7 @@ public class Addproduct extends testBase_old {
 		}
 	}
 
-	@DataProvider(name="addproduct")
+	@DataProvider(name="search")
 	public Object[][] searchdata() {
 		Object[][] obj= new Object[excelopt.getrow()][1];
 		int rowcnt = excelopt.getrow();

@@ -3,7 +3,6 @@ package com.testBase;
 import java.io.IOException;
 import java.time.Duration;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -11,14 +10,13 @@ import org.testng.annotations.BeforeMethod;
 import com.OrangeHRM.Utilities.ActionEngine;
 import com.OrangeHRM.Utilities.BrowserFactory;
 import com.OrangeHRM.Utilities.DriverFactory;
-import com.OrangeHRM.Utilities.ExtentFactory;
 import com.OrangeHRM.Utilities.Propertiesfile;
-import com.OrangeHRM.pageobjects.Loginpage;
-import com.aventstack.extentreports.Status;
 
 public class testBase extends ActionEngine {
 	public BrowserFactory bf= new BrowserFactory();
 
+	
+	
 	@BeforeMethod
 	public void launchapp() throws IOException {
 		String browser=Propertiesfile.getpropval("browser");
@@ -42,7 +40,7 @@ public class testBase extends ActionEngine {
 	
 	@AfterMethod
 	public void teardown() {
-		DriverFactory.getinstance().getdriver().close();
+		DriverFactory.getinstance().getdriver().quit();;
 		
 	}
 
