@@ -31,7 +31,7 @@ public class testBase extends ActionEngine {
 		WebDriver driver = bf.setbrowser(browser);
 		DriverFactory.getinstance().setdriver(driver);
 		//ExtentFactory.getinstance().getextent().log(Status.PASS,"Environment: "+env);
-		DriverFactory.getinstance().getdriver().manage().window().maximize();
+		//DriverFactory.getinstance().getdriver().manage().window().maximize();
 		DriverFactory.getinstance().getdriver().get(url);
 		DriverFactory.getinstance().getdriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		

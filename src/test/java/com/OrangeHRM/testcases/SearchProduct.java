@@ -57,6 +57,7 @@ public class SearchProduct extends testBase_old {
 		for(int j=1;j<=rowcnt;j++) {
 			HashMap<String, String> testdata = ExcelOperations.gethashvalue(j);
 			obj[j-1][0]=testdata;
+			
 		}
 
 		return obj;

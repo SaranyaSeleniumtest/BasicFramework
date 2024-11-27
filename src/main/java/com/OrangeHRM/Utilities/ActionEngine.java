@@ -3,6 +3,7 @@ package com.OrangeHRM.Utilities;
 import java.io.File;
 import java.io.FileInputStream;
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
@@ -35,6 +36,7 @@ public class ActionEngine {
 
 	public void sendKeys(WebElement element,String value, String fieldname) {
 		try {
+			element.clear();
 			element.sendKeys(value);
 			//add extent report for success
 			ExtentFactory.getinstance().getextent().log(Status.PASS,"The value: "+"<b>"+value+ "</b>"+ " is entered in the field "+ fieldname);
@@ -119,9 +121,8 @@ public class ActionEngine {
 				return flag;
 			}
 		}catch(Exception e) {
-			ExtentFactory.getinstance().getextent().log(Status.FAIL,Fieldname +" is not displayed due to exception: "+e);
-			System.out.println(e.getMessage());
-		}
+			ExtentFactory.getinstance().getextent().log(Status.FAIL,Fieldname +" is not displayed due to exception: "+ e.getMessage());
+					}
 		return flag;
 
 	}
@@ -135,7 +136,44 @@ public class ActionEngine {
 
 		}
 	}
+	
+	
+	
+	public void webdriverwait_visibility(List<WebElement> ele,int duration) {
+		try {
+			Wait= new WebDriverWait(DriverFactory.getinstance().getdriver(),Duration.ofSeconds(duration));
+			Wait.until(ExpectedConditions.visibilityOfAllElements(ele));
+		}catch(Exception e) {
+			ExtentFactory.getinstance().getextent().log(Status.FAIL,"Webdriver wait for visibility of element failed due to error: "+e.getMessage());
 
+		}
+	}
+
+	
+	public void dropdownlst(List<WebElement> options,String compare) {
+		boolean comparetxt=false;
+		try {
+		System.out.println(options.size());
+		
+		for (WebElement ele : options) {
+				System.out.println(ele.getText());
+				if(ele.getText().equalsIgnoreCase(compare)) {
+					ele.click();
+					comparetxt=true;
+					ExtentFactory.getinstance().getextent().log(Status.PASS,"Drop down list : "+compare+ " is selected");
+					break;
+				}
+		
+				
+		}
+		if(comparetxt=false){
+			ExtentFactory.getinstance().getextent().log(Status.FAIL,"Drop down list : "+compare+ " is NOT selected");	
+		}
+		}catch(Exception e) {
+			ExtentFactory.getinstance().getextent().log(Status.FAIL,"Drop down list : "+compare+ " is NOT selected due to exception "+ e.getMessage());
+			System.out.println("Exception "+e.getMessage());
+		}
+	}
 	
 	public void assertEqualsString_custom(String expvalue, String actualValue, String locatorName){
 		try {

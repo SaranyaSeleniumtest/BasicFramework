@@ -62,8 +62,7 @@ public class Addproduct extends testBase_old {
 			addpdt.click_viewcart();
 			Assert.assertEquals(shopcart.shopping_gettitle(),datatable.get("Shoppingtitle"));
 			
-//			Assert.assertEquals(pdtcheckout.getproductdetails(datatable.get("Productname1"),datatable.get("Pricelabel")),datatable.get("Price"));
-			//Assert.assertEquals(pdtcheckout.getproductdetails(datatable.get("Productname1"),"cart_total"),"2000");
+		
 			assertEqualsString_custom(pdtcheckout.getproductdetails(datatable.get("Productname1"),datatable.get("Pricelabel")),datatable.get("Price"),"Price");
 			assertEqualsString_custom(pdtcheckout.getproductdetails(datatable.get("Productname2"),datatable.get("Pricelabel")),datatable.get("Product2price"),"Product2_Price");
 

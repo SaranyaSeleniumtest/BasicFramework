@@ -8,7 +8,7 @@
 	
     <classes>
 		
-     <class name="com.OrangeHRM.testcases.Addproduct"/>
+     <class name="com.OrangeHRM.testcases.SearchProductAndAddProduct"/>
       
     </classes>
   </test> <!-- Test -->

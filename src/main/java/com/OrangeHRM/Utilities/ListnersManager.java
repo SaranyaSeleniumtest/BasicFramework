@@ -71,7 +71,7 @@ public class ListnersManager implements ITestListener {
 		try {
 			File Destination= new File(path_screen);
 			source.renameTo(Destination);
-			test.addScreenCaptureFromPath(path_screen);
+			ExtentFactory.getinstance().getextent().addScreenCaptureFromPath(path_screen);
 			ExtentFactory.getinstance().removeExtentobj();
 		}catch(Exception e) {
 			System.out.println(e.getMessage());

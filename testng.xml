@@ -7,8 +7,7 @@
   <test thread-count="5" name="Logintest">
 	
     <classes>
-        <class name="com.OrangeHRM.testcases.Addproduct"/>
-      
+     <class name="com.OrangeHRM.testcases.Categorytest"></class>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- SmokeTest -->

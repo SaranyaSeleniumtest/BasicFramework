@@ -30,6 +30,8 @@ public class BrowserFactory {
 			//	ExtentFactory.getinstance().getextent().log(Status.PASS,"Driver: "+ browser+ " is set successfully");
 			}
 			driver= new RemoteWebDriver(new URL("http://localhost:4444"), dc); 
+			driver.manage().window().maximize();
+			
 			return driver;
 		}
 		}catch(Exception e) {
@@ -47,7 +49,7 @@ public class BrowserFactory {
 			
 			opt.addArguments("--incognito");
 	//		ExtentFactory.getinstance().getextent().log(Status.PASS,"Driver: "+ browser+ " is set successfully");
-//			driver.manage().window().maximize();
+			driver.manage().window().maximize();
 			
 			
 		}

@@ -16,7 +16,7 @@ public class AddProductpage extends testBase_old {
 	By frm_Addcart=By.id("aswift_1:");
 	
 	public String getproductconfimation() {
-		webdriverwait_visibility(DriverFactory.getinstance().getdriver().findElement(msg_productconfirm),30);
+		webdriverwait_visibility(DriverFactory.getinstance().getdriver().findElement(msg_productconfirm),60);
 		return gettext(DriverFactory.getinstance().getdriver().findElement(msg_productconfirm),"AddProduct_Confirmation");
 	}
 
