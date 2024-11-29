@@ -19,6 +19,7 @@ import com.aventstack.extentreports.Status;
 import com.testBase.testBase_old;
 
 public class Categorytest extends testBase_old {
+	//working on category
 
 //	1. Launch browser
 //	2. Navigate to url 'http://automationexercise.com'
