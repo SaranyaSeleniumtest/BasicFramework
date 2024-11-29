@@ -16,8 +16,7 @@ import com.aventstack.extentreports.Status;
 import com.testBase.testBase_old;
 
 public class SearchProduct extends testBase_old {
-	//Search Product tc
-	//This is git code
+	//Search Product tc-saranyacode
 	//	1. Launch browser
 	//	2. Navigate to url 'http://automationexercise.com'
 	//	3. Verify that home page is visible successfully
