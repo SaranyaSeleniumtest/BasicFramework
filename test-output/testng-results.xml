@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="7" passed="6" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-11-26T18:29:38 IST" name="SmokeTest" finished-at="2024-11-26T18:31:31 IST" duration-ms="113145">
+    <groups>
+    </groups>
+    <test started-at="2024-11-26T18:29:38 IST" name="Logintest" finished-at="2024-11-26T18:31:31 IST" duration-ms="113145">
+      <class name="com.OrangeHRM.testcases.Categorytest">
+        <test-method is-config="true" signature="launchapp()[pri:0, instance:com.OrangeHRM.testcases.Categorytest@4455f57d]" started-at="2024-11-26T18:29:38 IST" name="launchapp" finished-at="2024-11-26T18:29:43 IST" duration-ms="4711" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchapp -->
+        <test-method signature="TC06_ViewCategoryPdts(java.lang.Object)[pri:0, instance:com.OrangeHRM.testcases.Categorytest@4455f57d]" started-at="2024-11-26T18:29:43 IST" name="TC06_ViewCategoryPdts" data-provider="CategoryProd" finished-at="2024-11-26T18:29:55 IST" duration-ms="12344" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{SubCategory=Tops, Email=vprsaran@gmail.com, Category=Women, Password=Testing@123, Hometitle=Automation Exercise}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at org.testng.Assert.assertTrue(Assert.java:67)
+at com.OrangeHRM.Utilities.ActionEngine.assertEqualsString_custom(ActionEngine.java:184)
+at com.OrangeHRM.testcases.Categorytest.TC06_ViewCategoryPdts(Categorytest.java:58)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC06_ViewCategoryPdts -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.OrangeHRM.testcases.Categorytest@4455f57d]" started-at="2024-11-26T18:29:58 IST" name="teardown" finished-at="2024-11-26T18:29:59 IST" duration-ms="566" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="launchapp()[pri:0, instance:com.OrangeHRM.testcases.Categorytest@4455f57d]" started-at="2024-11-26T18:29:59 IST" name="launchapp" finished-at="2024-11-26T18:30:03 IST" duration-ms="3946" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchapp -->
+        <test-method signature="TC06_ViewCategoryPdts(java.lang.Object)[pri:0, instance:com.OrangeHRM.testcases.Categorytest@4455f57d]" started-at="2024-11-26T18:30:03 IST" name="TC06_ViewCategoryPdts" data-provider="CategoryProd" finished-at="2024-11-26T18:30:13 IST" duration-ms="10353" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{SubCategory=Dress, Email=vprsaran@gmail.com, Category=Women, Password=Testing@123, Hometitle=Automation Exercise}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC06_ViewCategoryPdts -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.OrangeHRM.testcases.Categorytest@4455f57d]" started-at="2024-11-26T18:30:13 IST" name="teardown" finished-at="2024-11-26T18:30:14 IST" duration-ms="571" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="launchapp()[pri:0, instance:com.OrangeHRM.testcases.Categorytest@4455f57d]" started-at="2024-11-26T18:30:14 IST" name="launchapp" finished-at="2024-11-26T18:30:17 IST" duration-ms="3211" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchapp -->
+        <test-method signature="TC06_ViewCategoryPdts(java.lang.Object)[pri:0, instance:com.OrangeHRM.testcases.Categorytest@4455f57d]" started-at="2024-11-26T18:30:17 IST" name="TC06_ViewCategoryPdts" data-provider="CategoryProd" finished-at="2024-11-26T18:30:29 IST" duration-ms="11852" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{SubCategory=Saree, Email=vprsaran@gmail.com, Category=Women, Password=Testing@123, Hometitle=Automation Exercise}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC06_ViewCategoryPdts -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.OrangeHRM.testcases.Categorytest@4455f57d]" started-at="2024-11-26T18:30:29 IST" name="teardown" finished-at="2024-11-26T18:30:29 IST" duration-ms="558" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="launchapp()[pri:0, instance:com.OrangeHRM.testcases.Categorytest@4455f57d]" started-at="2024-11-26T18:30:29 IST" name="launchapp" finished-at="2024-11-26T18:30:33 IST" duration-ms="3859" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchapp -->
+        <test-method signature="TC06_ViewCategoryPdts(java.lang.Object)[pri:0, instance:com.OrangeHRM.testcases.Categorytest@4455f57d]" started-at="2024-11-26T18:30:33 IST" name="TC06_ViewCategoryPdts" data-provider="CategoryProd" finished-at="2024-11-26T18:30:45 IST" duration-ms="11478" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{SubCategory=Tshirts, Email=vprsaran@gmail.com, Category=Men, Password=Testing@123, Hometitle=Automation Exercise}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC06_ViewCategoryPdts -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.OrangeHRM.testcases.Categorytest@4455f57d]" started-at="2024-11-26T18:30:45 IST" name="teardown" finished-at="2024-11-26T18:30:45 IST" duration-ms="383" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="launchapp()[pri:0, instance:com.OrangeHRM.testcases.Categorytest@4455f57d]" started-at="2024-11-26T18:30:45 IST" name="launchapp" finished-at="2024-11-26T18:30:49 IST" duration-ms="3879" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchapp -->
+        <test-method signature="TC06_ViewCategoryPdts(java.lang.Object)[pri:0, instance:com.OrangeHRM.testcases.Categorytest@4455f57d]" started-at="2024-11-26T18:30:49 IST" name="TC06_ViewCategoryPdts" data-provider="CategoryProd" finished-at="2024-11-26T18:30:58 IST" duration-ms="9334" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{SubCategory=Jeans, Email=vprsaran@gmail.com, Category=Men, Password=Testing@123, Hometitle=Automation Exercise}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC06_ViewCategoryPdts -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.OrangeHRM.testcases.Categorytest@4455f57d]" started-at="2024-11-26T18:30:58 IST" name="teardown" finished-at="2024-11-26T18:30:59 IST" duration-ms="559" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="launchapp()[pri:0, instance:com.OrangeHRM.testcases.Categorytest@4455f57d]" started-at="2024-11-26T18:30:59 IST" name="launchapp" finished-at="2024-11-26T18:31:03 IST" duration-ms="3866" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchapp -->
+        <test-method signature="TC06_ViewCategoryPdts(java.lang.Object)[pri:0, instance:com.OrangeHRM.testcases.Categorytest@4455f57d]" started-at="2024-11-26T18:31:03 IST" name="TC06_ViewCategoryPdts" data-provider="CategoryProd" finished-at="2024-11-26T18:31:14 IST" duration-ms="11529" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{SubCategory=Dress, Email=vprsaran@gmail.com, Category=Kids, Password=Testing@123, Hometitle=Automation Exercise}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC06_ViewCategoryPdts -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.OrangeHRM.testcases.Categorytest@4455f57d]" started-at="2024-11-26T18:31:14 IST" name="teardown" finished-at="2024-11-26T18:31:15 IST" duration-ms="618" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="launchapp()[pri:0, instance:com.OrangeHRM.testcases.Categorytest@4455f57d]" started-at="2024-11-26T18:31:15 IST" name="launchapp" finished-at="2024-11-26T18:31:18 IST" duration-ms="3690" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchapp -->
+        <test-method signature="TC06_ViewCategoryPdts(java.lang.Object)[pri:0, instance:com.OrangeHRM.testcases.Categorytest@4455f57d]" started-at="2024-11-26T18:31:18 IST" name="TC06_ViewCategoryPdts" data-provider="CategoryProd" finished-at="2024-11-26T18:31:30 IST" duration-ms="11956" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{SubCategory=Tops & Shirts, Email=vprsaran@gmail.com, Category=Kids, Password=Testing@123, Hometitle=Automation Exercise}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC06_ViewCategoryPdts -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.OrangeHRM.testcases.Categorytest@4455f57d]" started-at="2024-11-26T18:31:30 IST" name="teardown" finished-at="2024-11-26T18:31:31 IST" duration-ms="634" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.OrangeHRM.testcases.Categorytest -->
+    </test> <!-- Logintest -->
+  </suite> <!-- SmokeTest -->
+</testng-results>
