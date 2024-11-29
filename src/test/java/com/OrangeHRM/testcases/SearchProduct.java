@@ -16,7 +16,7 @@ import com.aventstack.extentreports.Status;
 import com.testBase.testBase_old;
 
 public class SearchProduct extends testBase_old {
-
+	//Search Product tc
 	//	1. Launch browser
 	//	2. Navigate to url 'http://automationexercise.com'
 	//	3. Verify that home page is visible successfully
@@ -49,7 +49,7 @@ public class SearchProduct extends testBase_old {
 		}
 	}
 
-	@DataProvider(name="search")
+	@DataProvider(name="search",indices= {0})
 	public Object[][] searchdata() {
 		Object[][] obj= new Object[excelopt.getrow()][1];
 		int rowcnt = excelopt.getrow();
