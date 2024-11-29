@@ -49,6 +49,7 @@ public class Productpage extends testBase_old {
 	
 	
 	public void searchpdt(HashMap<String,String>hm) {
+		System.out.println(hm.get("Productname1"));
 		sendKeys(DriverFactory.getinstance().getdriver().findElement(txt_search),hm.get("Productname1"), "Searchtxt");
 		click(DriverFactory.getinstance().getdriver().findElement(btn_search), "Searchbtn");
 	}
@@ -103,7 +104,7 @@ public class Productpage extends testBase_old {
 		subcategory=subcategory.toUpperCase();
 		System.out.println(subcategory);
 		String customxpath="//div[@id='"+category+"']//ul//li//a";
-		//webdriverwait_visibility(DriverFactory.getinstance().getdriver().findElements(By.xpath(customxpath)),10);
+		webdriverwait_visibility(DriverFactory.getinstance().getdriver().findElements(By.xpath(customxpath)),30);
 		dropdownlst(DriverFactory.getinstance().getdriver().findElements(By.xpath(customxpath)),subcategory );
 	}
 	

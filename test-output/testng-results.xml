@@ -1,36 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="7" passed="6" failed="1" skipped="0">
+<testng-results ignored="0" total="9" passed="8" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-11-26T18:29:38 IST" name="SmokeTest" finished-at="2024-11-26T18:31:31 IST" duration-ms="113145">
+  <suite started-at="2024-11-29T14:42:29 IST" name="SmokeTest" finished-at="2024-11-29T14:45:52 IST" duration-ms="202734">
     <groups>
     </groups>
-    <test started-at="2024-11-26T18:29:38 IST" name="Logintest" finished-at="2024-11-26T18:31:31 IST" duration-ms="113145">
-      <class name="com.OrangeHRM.testcases.Categorytest">
-        <test-method is-config="true" signature="launchapp()[pri:0, instance:com.OrangeHRM.testcases.Categorytest@4455f57d]" started-at="2024-11-26T18:29:38 IST" name="launchapp" finished-at="2024-11-26T18:29:43 IST" duration-ms="4711" status="PASS">
+    <test started-at="2024-11-29T14:42:29 IST" name="Logintest" finished-at="2024-11-29T14:45:52 IST" duration-ms="202734">
+      <class name="com.OrangeHRM.testcases.SearchProduct">
+        <test-method is-config="true" signature="launchapp()[pri:0, instance:com.OrangeHRM.testcases.SearchProduct@4455f57d]" started-at="2024-11-29T14:42:29 IST" name="launchapp" finished-at="2024-11-29T14:42:33 IST" duration-ms="4159" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchapp -->
-        <test-method signature="TC06_ViewCategoryPdts(java.lang.Object)[pri:0, instance:com.OrangeHRM.testcases.Categorytest@4455f57d]" started-at="2024-11-26T18:29:43 IST" name="TC06_ViewCategoryPdts" data-provider="CategoryProd" finished-at="2024-11-26T18:29:55 IST" duration-ms="12344" status="FAIL">
+        <test-method signature="TC03_searchpdt(java.lang.Object)[pri:0, instance:com.OrangeHRM.testcases.SearchProduct@4455f57d]" started-at="2024-11-29T14:42:33 IST" name="TC03_searchpdt" data-provider="search" finished-at="2024-11-29T14:42:42 IST" duration-ms="8118" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{SubCategory=Tops, Email=vprsaran@gmail.com, Category=Women, Password=Testing@123, Hometitle=Automation Exercise}]]>
+                <![CDATA[{Product2price=Rs. 400, Pricelabel=cart_price, Email=vprsaran@gmail.com, Quantity=null, Productconfirmmsg=Your product has been added to cart., ProductTitle=Automation Exercise - All Products, Hometitle=Automation Exercise, Shoppingtitle=Automation Exercise - Checkout, Price=Rs. 500, Productname2=Men Tshirt, Total=null, Productname1=Blue Top, Password=Testing@123}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC03_searchpdt -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.OrangeHRM.testcases.SearchProduct@4455f57d]" started-at="2024-11-29T14:42:42 IST" name="teardown" finished-at="2024-11-29T14:42:42 IST" duration-ms="288" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.OrangeHRM.testcases.SearchProduct -->
+      <class name="com.OrangeHRM.testcases.SearchProductAndAddProduct">
+        <test-method is-config="true" signature="launchapp()[pri:0, instance:com.OrangeHRM.testcases.SearchProductAndAddProduct@566d0c69]" started-at="2024-11-29T14:43:37 IST" name="launchapp" finished-at="2024-11-29T14:43:40 IST" duration-ms="3229" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchapp -->
+        <test-method signature="TC05_SearchandAddpdt(java.lang.Object)[pri:0, instance:com.OrangeHRM.testcases.SearchProductAndAddProduct@566d0c69]" started-at="2024-11-29T14:43:40 IST" name="TC05_SearchandAddpdt" data-provider="AddProduct" finished-at="2024-11-29T14:43:52 IST" duration-ms="12112" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Product2price=Rs. 400, Pricelabel=cart_price, Email=vprsaran@gmail.com, Quantity=null, Productconfirmmsg=Your product has been added to cart., ProductTitle=Automation Exercise - All Products, Hometitle=Automation Exercise, Shoppingtitle=Automation Exercise - Checkout, Price=Rs. 500, Productname2=Men Tshirt, Total=null, Productname1=Blue Top, Password=Testing@123}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC05_SearchandAddpdt -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.OrangeHRM.testcases.SearchProductAndAddProduct@566d0c69]" started-at="2024-11-29T14:43:52 IST" name="teardown" finished-at="2024-11-29T14:43:53 IST" duration-ms="471" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="launchapp()[pri:0, instance:com.OrangeHRM.testcases.SearchProductAndAddProduct@566d0c69]" started-at="2024-11-29T14:43:53 IST" name="launchapp" finished-at="2024-11-29T14:43:55 IST" duration-ms="2003" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchapp -->
+        <test-method signature="TC05_SearchandAddpdt(java.lang.Object)[pri:0, instance:com.OrangeHRM.testcases.SearchProductAndAddProduct@566d0c69]" started-at="2024-11-29T14:43:55 IST" name="TC05_SearchandAddpdt" data-provider="AddProduct" finished-at="2024-11-29T14:44:08 IST" duration-ms="13654" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Product2price=Rs. 700, Pricelabel=cart_price, Email=vprsaran@gmail.com, Quantity=null, Productconfirmmsg=Your product has been added to cart., ProductTitle=Automation Exercise - All Products, Hometitle=Automation Exercise, Shoppingtitle=Automation Exercise - Checkout, Price=Rs. 600, Productname2=Fancy Green Top, Total=null, Productname1=Winter Top, Password=Testing@123}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC05_SearchandAddpdt -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.OrangeHRM.testcases.SearchProductAndAddProduct@566d0c69]" started-at="2024-11-29T14:44:08 IST" name="teardown" finished-at="2024-11-29T14:44:09 IST" duration-ms="482" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="launchapp()[pri:0, instance:com.OrangeHRM.testcases.SearchProductAndAddProduct@566d0c69]" started-at="2024-11-29T14:44:09 IST" name="launchapp" finished-at="2024-11-29T14:44:12 IST" duration-ms="3156" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchapp -->
+        <test-method signature="TC05_SearchandAddpdt(java.lang.Object)[pri:0, instance:com.OrangeHRM.testcases.SearchProductAndAddProduct@566d0c69]" started-at="2024-11-29T14:44:12 IST" name="TC05_SearchandAddpdt" data-provider="AddProduct" finished-at="2024-11-29T14:44:32 IST" duration-ms="19745" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Product2price=Rs. 278, Pricelabel=cart_price, Email=vprsaran@gmail.com, Quantity=null, Productconfirmmsg=Your product has been added to cart., ProductTitle=Automation Exercise - All Products, Hometitle=Automation Exercise, Shoppingtitle=Automation Exercise - Checkout, Price=Rs. 1000, Productname2=Frozen Tops For Kids, Total=null, Productname1=Madame Top For Women, Password=Testing@123}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC05_SearchandAddpdt -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.OrangeHRM.testcases.SearchProductAndAddProduct@566d0c69]" started-at="2024-11-29T14:44:32 IST" name="teardown" finished-at="2024-11-29T14:44:32 IST" duration-ms="441" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="launchapp()[pri:0, instance:com.OrangeHRM.testcases.SearchProductAndAddProduct@566d0c69]" started-at="2024-11-29T14:44:32 IST" name="launchapp" finished-at="2024-11-29T14:44:36 IST" duration-ms="3871" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchapp -->
+        <test-method signature="TC05_SearchandAddpdt(java.lang.Object)[pri:0, instance:com.OrangeHRM.testcases.SearchProductAndAddProduct@566d0c69]" started-at="2024-11-29T14:44:36 IST" name="TC05_SearchandAddpdt" data-provider="AddProduct" finished-at="2024-11-29T14:45:48 IST" duration-ms="72369" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Product2price=Rs. 315, Pricelabel=cart_price, Email=vprsaran@gmail.com, Quantity=null, Productconfirmmsg=Your product has been added to cart., ProductTitle=Automation Exercise - All Products, Hometitle=Automation Exercise, Shoppingtitle=Automation Exercise - Checkout, Price=Rs. 400, Productname2=Printed Off Shoulder Top - White, Total=null, Productname1=Summer White Top, Password=Testing@123}]]>
               </value>
             </param>
           </params>
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [true] but found [false]]]>
+              <![CDATA[expected [Your product has been added to cart.] but found []]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+              <![CDATA[java.lang.AssertionError: expected [Your product has been added to cart.] but found []
 at org.testng.Assert.fail(Assert.java:111)
 at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertTrue(Assert.java:57)
-at org.testng.Assert.assertTrue(Assert.java:67)
-at com.OrangeHRM.Utilities.ActionEngine.assertEqualsString_custom(ActionEngine.java:184)
-at com.OrangeHRM.testcases.Categorytest.TC06_ViewCategoryPdts(Categorytest.java:58)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at com.OrangeHRM.testcases.SearchProductAndAddProduct.TC05_SearchandAddpdt(SearchProductAndAddProduct.java:66)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -64,126 +143,90 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC06_ViewCategoryPdts -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.OrangeHRM.testcases.Categorytest@4455f57d]" started-at="2024-11-26T18:29:58 IST" name="teardown" finished-at="2024-11-26T18:29:59 IST" duration-ms="566" status="PASS">
+        </test-method> <!-- TC05_SearchandAddpdt -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.OrangeHRM.testcases.SearchProductAndAddProduct@566d0c69]" started-at="2024-11-29T14:45:51 IST" name="teardown" finished-at="2024-11-29T14:45:52 IST" duration-ms="480" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="launchapp()[pri:0, instance:com.OrangeHRM.testcases.Categorytest@4455f57d]" started-at="2024-11-26T18:29:59 IST" name="launchapp" finished-at="2024-11-26T18:30:03 IST" duration-ms="3946" status="PASS">
+      </class> <!-- com.OrangeHRM.testcases.SearchProductAndAddProduct -->
+      <class name="com.OrangeHRM.testcases.Addproduct">
+        <test-method is-config="true" signature="launchapp()[pri:0, instance:com.OrangeHRM.testcases.Addproduct@4a55a6e8]" started-at="2024-11-29T14:42:42 IST" name="launchapp" finished-at="2024-11-29T14:42:45 IST" duration-ms="2736" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchapp -->
-        <test-method signature="TC06_ViewCategoryPdts(java.lang.Object)[pri:0, instance:com.OrangeHRM.testcases.Categorytest@4455f57d]" started-at="2024-11-26T18:30:03 IST" name="TC06_ViewCategoryPdts" data-provider="CategoryProd" finished-at="2024-11-26T18:30:13 IST" duration-ms="10353" status="PASS">
+        <test-method signature="TC04_VerifyaddProduct(java.lang.Object)[pri:0, instance:com.OrangeHRM.testcases.Addproduct@4a55a6e8]" started-at="2024-11-29T14:42:45 IST" name="TC04_VerifyaddProduct" data-provider="addproduct" finished-at="2024-11-29T14:42:55 IST" duration-ms="10554" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{SubCategory=Dress, Email=vprsaran@gmail.com, Category=Women, Password=Testing@123, Hometitle=Automation Exercise}]]>
+                <![CDATA[{Product2price=Rs. 400, Pricelabel=cart_price, Email=vprsaran@gmail.com, Quantity=null, Productconfirmmsg=Your product has been added to cart., ProductTitle=Automation Exercise - All Products, Hometitle=Automation Exercise, Shoppingtitle=Automation Exercise - Checkout, Price=Rs. 500, Productname2=Men Tshirt, Total=null, Productname1=Blue Top, Password=Testing@123}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC06_ViewCategoryPdts -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.OrangeHRM.testcases.Categorytest@4455f57d]" started-at="2024-11-26T18:30:13 IST" name="teardown" finished-at="2024-11-26T18:30:14 IST" duration-ms="571" status="PASS">
+        </test-method> <!-- TC04_VerifyaddProduct -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.OrangeHRM.testcases.Addproduct@4a55a6e8]" started-at="2024-11-29T14:42:55 IST" name="teardown" finished-at="2024-11-29T14:42:55 IST" duration-ms="290" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="launchapp()[pri:0, instance:com.OrangeHRM.testcases.Categorytest@4455f57d]" started-at="2024-11-26T18:30:14 IST" name="launchapp" finished-at="2024-11-26T18:30:17 IST" duration-ms="3211" status="PASS">
+        <test-method is-config="true" signature="launchapp()[pri:0, instance:com.OrangeHRM.testcases.Addproduct@4a55a6e8]" started-at="2024-11-29T14:42:55 IST" name="launchapp" finished-at="2024-11-29T14:42:59 IST" duration-ms="3812" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchapp -->
-        <test-method signature="TC06_ViewCategoryPdts(java.lang.Object)[pri:0, instance:com.OrangeHRM.testcases.Categorytest@4455f57d]" started-at="2024-11-26T18:30:17 IST" name="TC06_ViewCategoryPdts" data-provider="CategoryProd" finished-at="2024-11-26T18:30:29 IST" duration-ms="11852" status="PASS">
+        <test-method signature="TC04_VerifyaddProduct(java.lang.Object)[pri:0, instance:com.OrangeHRM.testcases.Addproduct@4a55a6e8]" started-at="2024-11-29T14:42:59 IST" name="TC04_VerifyaddProduct" data-provider="addproduct" finished-at="2024-11-29T14:43:09 IST" duration-ms="9577" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{SubCategory=Saree, Email=vprsaran@gmail.com, Category=Women, Password=Testing@123, Hometitle=Automation Exercise}]]>
+                <![CDATA[{Product2price=Rs. 700, Pricelabel=cart_price, Email=vprsaran@gmail.com, Quantity=null, Productconfirmmsg=Your product has been added to cart., ProductTitle=Automation Exercise - All Products, Hometitle=Automation Exercise, Shoppingtitle=Automation Exercise - Checkout, Price=Rs. 600, Productname2=Fancy Green Top, Total=null, Productname1=Winter Top, Password=Testing@123}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC06_ViewCategoryPdts -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.OrangeHRM.testcases.Categorytest@4455f57d]" started-at="2024-11-26T18:30:29 IST" name="teardown" finished-at="2024-11-26T18:30:29 IST" duration-ms="558" status="PASS">
+        </test-method> <!-- TC04_VerifyaddProduct -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.OrangeHRM.testcases.Addproduct@4a55a6e8]" started-at="2024-11-29T14:43:09 IST" name="teardown" finished-at="2024-11-29T14:43:09 IST" duration-ms="465" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="launchapp()[pri:0, instance:com.OrangeHRM.testcases.Categorytest@4455f57d]" started-at="2024-11-26T18:30:29 IST" name="launchapp" finished-at="2024-11-26T18:30:33 IST" duration-ms="3859" status="PASS">
+        <test-method is-config="true" signature="launchapp()[pri:0, instance:com.OrangeHRM.testcases.Addproduct@4a55a6e8]" started-at="2024-11-29T14:43:09 IST" name="launchapp" finished-at="2024-11-29T14:43:13 IST" duration-ms="3844" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchapp -->
-        <test-method signature="TC06_ViewCategoryPdts(java.lang.Object)[pri:0, instance:com.OrangeHRM.testcases.Categorytest@4455f57d]" started-at="2024-11-26T18:30:33 IST" name="TC06_ViewCategoryPdts" data-provider="CategoryProd" finished-at="2024-11-26T18:30:45 IST" duration-ms="11478" status="PASS">
+        <test-method signature="TC04_VerifyaddProduct(java.lang.Object)[pri:0, instance:com.OrangeHRM.testcases.Addproduct@4a55a6e8]" started-at="2024-11-29T14:43:13 IST" name="TC04_VerifyaddProduct" data-provider="addproduct" finished-at="2024-11-29T14:43:24 IST" duration-ms="10711" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{SubCategory=Tshirts, Email=vprsaran@gmail.com, Category=Men, Password=Testing@123, Hometitle=Automation Exercise}]]>
+                <![CDATA[{Product2price=Rs. 278, Pricelabel=cart_price, Email=vprsaran@gmail.com, Quantity=null, Productconfirmmsg=Your product has been added to cart., ProductTitle=Automation Exercise - All Products, Hometitle=Automation Exercise, Shoppingtitle=Automation Exercise - Checkout, Price=Rs. 1000, Productname2=Frozen Tops For Kids, Total=null, Productname1=Madame Top For Women, Password=Testing@123}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC06_ViewCategoryPdts -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.OrangeHRM.testcases.Categorytest@4455f57d]" started-at="2024-11-26T18:30:45 IST" name="teardown" finished-at="2024-11-26T18:30:45 IST" duration-ms="383" status="PASS">
+        </test-method> <!-- TC04_VerifyaddProduct -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.OrangeHRM.testcases.Addproduct@4a55a6e8]" started-at="2024-11-29T14:43:24 IST" name="teardown" finished-at="2024-11-29T14:43:24 IST" duration-ms="435" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="launchapp()[pri:0, instance:com.OrangeHRM.testcases.Categorytest@4455f57d]" started-at="2024-11-26T18:30:45 IST" name="launchapp" finished-at="2024-11-26T18:30:49 IST" duration-ms="3879" status="PASS">
+        <test-method is-config="true" signature="launchapp()[pri:0, instance:com.OrangeHRM.testcases.Addproduct@4a55a6e8]" started-at="2024-11-29T14:43:24 IST" name="launchapp" finished-at="2024-11-29T14:43:27 IST" duration-ms="2482" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchapp -->
-        <test-method signature="TC06_ViewCategoryPdts(java.lang.Object)[pri:0, instance:com.OrangeHRM.testcases.Categorytest@4455f57d]" started-at="2024-11-26T18:30:49 IST" name="TC06_ViewCategoryPdts" data-provider="CategoryProd" finished-at="2024-11-26T18:30:58 IST" duration-ms="9334" status="PASS">
+        <test-method signature="TC04_VerifyaddProduct(java.lang.Object)[pri:0, instance:com.OrangeHRM.testcases.Addproduct@4a55a6e8]" started-at="2024-11-29T14:43:27 IST" name="TC04_VerifyaddProduct" data-provider="addproduct" finished-at="2024-11-29T14:43:36 IST" duration-ms="9727" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{SubCategory=Jeans, Email=vprsaran@gmail.com, Category=Men, Password=Testing@123, Hometitle=Automation Exercise}]]>
+                <![CDATA[{Product2price=Rs. 315, Pricelabel=cart_price, Email=vprsaran@gmail.com, Quantity=null, Productconfirmmsg=Your product has been added to cart., ProductTitle=Automation Exercise - All Products, Hometitle=Automation Exercise, Shoppingtitle=Automation Exercise - Checkout, Price=Rs. 400, Productname2=Printed Off Shoulder Top - White, Total=null, Productname1=Summer White Top, Password=Testing@123}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC06_ViewCategoryPdts -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.OrangeHRM.testcases.Categorytest@4455f57d]" started-at="2024-11-26T18:30:58 IST" name="teardown" finished-at="2024-11-26T18:30:59 IST" duration-ms="559" status="PASS">
+        </test-method> <!-- TC04_VerifyaddProduct -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.OrangeHRM.testcases.Addproduct@4a55a6e8]" started-at="2024-11-29T14:43:36 IST" name="teardown" finished-at="2024-11-29T14:43:37 IST" duration-ms="394" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="launchapp()[pri:0, instance:com.OrangeHRM.testcases.Categorytest@4455f57d]" started-at="2024-11-26T18:30:59 IST" name="launchapp" finished-at="2024-11-26T18:31:03 IST" duration-ms="3866" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchapp -->
-        <test-method signature="TC06_ViewCategoryPdts(java.lang.Object)[pri:0, instance:com.OrangeHRM.testcases.Categorytest@4455f57d]" started-at="2024-11-26T18:31:03 IST" name="TC06_ViewCategoryPdts" data-provider="CategoryProd" finished-at="2024-11-26T18:31:14 IST" duration-ms="11529" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{SubCategory=Dress, Email=vprsaran@gmail.com, Category=Kids, Password=Testing@123, Hometitle=Automation Exercise}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC06_ViewCategoryPdts -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.OrangeHRM.testcases.Categorytest@4455f57d]" started-at="2024-11-26T18:31:14 IST" name="teardown" finished-at="2024-11-26T18:31:15 IST" duration-ms="618" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="launchapp()[pri:0, instance:com.OrangeHRM.testcases.Categorytest@4455f57d]" started-at="2024-11-26T18:31:15 IST" name="launchapp" finished-at="2024-11-26T18:31:18 IST" duration-ms="3690" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchapp -->
-        <test-method signature="TC06_ViewCategoryPdts(java.lang.Object)[pri:0, instance:com.OrangeHRM.testcases.Categorytest@4455f57d]" started-at="2024-11-26T18:31:18 IST" name="TC06_ViewCategoryPdts" data-provider="CategoryProd" finished-at="2024-11-26T18:31:30 IST" duration-ms="11956" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{SubCategory=Tops & Shirts, Email=vprsaran@gmail.com, Category=Kids, Password=Testing@123, Hometitle=Automation Exercise}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC06_ViewCategoryPdts -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.OrangeHRM.testcases.Categorytest@4455f57d]" started-at="2024-11-26T18:31:30 IST" name="teardown" finished-at="2024-11-26T18:31:31 IST" duration-ms="634" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- com.OrangeHRM.testcases.Categorytest -->
+      </class> <!-- com.OrangeHRM.testcases.Addproduct -->
     </test> <!-- Logintest -->
   </suite> <!-- SmokeTest -->
 </testng-results>
