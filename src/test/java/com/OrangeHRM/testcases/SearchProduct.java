@@ -42,7 +42,7 @@ public class SearchProduct extends testBase_old {
 			tabs.Click_Pdt();
 			Assert.assertTrue(pdt.verifytitle(),"Product Title mismatched");
 			pdt.searchpdt(datatable);
-			Assert.assertEquals(pdt.validatepdt(),datatable.get("Productname"),"Product mismatched");
+			Assert.assertEquals(pdt.validatepdt(),datatable.get("Productname1"),"Product mismatched");
 			ExtentFactory.getinstance().getextent().log(Status.PASS, "Product related search is successful");
 		}catch(Exception e) {
 			ExtentFactory.getinstance().getextent().log(Status.FAIL, "Product related search is NOT successful due to following error"+ e.getMessage());	
