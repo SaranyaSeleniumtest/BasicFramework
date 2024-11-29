@@ -13,10 +13,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Test {
 	
-	// this is for trial code
-	//testing
-	//updated code
-	//new test
+
 	public void select_Subcategory() {
 		
 	}

@@ -19,6 +19,7 @@ import com.aventstack.extentreports.Status;
 import com.testBase.testBase_old;
 
 public class Addproduct extends testBase_old {
+	//This is add product tc
 //TestCase details
 //	1. Launch browser
 //	2. Navigate to url 'http://automationexercise.com'
