@@ -12,6 +12,7 @@ import com.OrangeHRM.pageobjects.Loginpage;
 import com.testBase.testBase;
 
 public class ValidateLinks extends testBase {
+	//new test
 	
 	Loginpage lp= new Loginpage();
 	AllTabsPage tabs= new AllTabsPage();
