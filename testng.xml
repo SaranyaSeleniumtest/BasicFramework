@@ -9,11 +9,8 @@
     <classes>
        
       
-       <class name="com.OrangeHRM.testcases.SearchProduct"/>
-       <class name="com.OrangeHRM.testcases.Addproduct"/>
-       <class name="com.OrangeHRM.testcases.SearchProductAndAddProduct"/>
-     
-      
+            <class name="com.OrangeHRM.testcases.Categorytest"/>
+       
      
       
     </classes>

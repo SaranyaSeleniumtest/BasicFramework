@@ -32,11 +32,16 @@ public class AllTabsPage extends testBase_old {
 			String xpath= "//a[text()=' "+tabname+"']";
 
 			DriverFactory.getinstance().getdriver().findElement(By.xpath(xpath)).click();
-			ExtentFactory.getinstance().getextent().log(Status.PASS, "Tabname "+tabname+"is selected");
+			ExtentFactory.getinstance().getextent().log(Status.PASS, "Tabname "+tabname+" is selected");
 		}catch(Exception e){
-			ExtentFactory.getinstance().getextent().log(Status.FAIL, "Tabname "+tabname+"is not selected due to exception"+ e);
+			ExtentFactory.getinstance().getextent().log(Status.FAIL, "Tabname "+tabname+" is not selected due to exception"+ e);
 		}
 	}
+	
+	 public String validatetabs_landingpage(String tabname) {
+		return  gettitle(tabname);
+		 
+	 }
 
 
 }

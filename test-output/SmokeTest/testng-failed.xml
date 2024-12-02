@@ -6,13 +6,13 @@
   </listeners>
   <test thread-count="5" name="Logintest(failed)">
     <classes>
-      <class name="com.OrangeHRM.testcases.SearchProductAndAddProduct">
+      <class name="com.OrangeHRM.testcases.Categorytest">
         <methods>
           <include name="teardown"/>
           <include name="launchapp"/>
-          <include name="TC05_SearchandAddpdt" invocation-numbers="3"/>
+          <include name="TC06_ViewCategoryPdts" invocation-numbers="3"/>
         </methods>
-      </class> <!-- com.OrangeHRM.testcases.SearchProductAndAddProduct -->
+      </class> <!-- com.OrangeHRM.testcases.Categorytest -->
     </classes>
   </test> <!-- Logintest(failed) -->
 </suite> <!-- Failed suite [SmokeTest] -->

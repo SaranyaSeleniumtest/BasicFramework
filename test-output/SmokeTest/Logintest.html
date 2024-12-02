@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Logintest</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>8/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>6/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Nov 29 14:42:29 IST 2024</td>
+<td>Started on:</td><td>Fri Nov 29 19:26:41 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>202 seconds (202734 ms)</td>
+<tr><td>Total time:</td><td>255 seconds (255129 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,19 +76,19 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.OrangeHRM.testcases.SearchProductAndAddProduct.TC05_SearchandAddpdt()'><b>TC05_SearchandAddpdt</b><br>Test class: com.OrangeHRM.testcases.SearchProductAndAddProduct<br>Parameters: {Product2price=Rs. 315, Pricelabel=cart_price, Email=vprsaran@gmail.com, Quantity=null, Productconfirmmsg=Your product has been added to cart., ProductTitle=Automation Exercise - All Products, Hometitle=Automation Exercise, Shoppingtitle=Automation Exercise - Checkout, Price=Rs. 400, Productname2=Printed Off Shoulder Top - White, Total=null, Productname1=Summer White Top, Password=Testing@123}</td>
-<td><div><pre>java.lang.AssertionError: expected [Your product has been added to cart.] but found []
-	at com.OrangeHRM.testcases.SearchProductAndAddProduct.TC05_SearchandAddpdt(SearchProductAndAddProduct.java:66)
+<td title='com.OrangeHRM.testcases.Categorytest.TC06_ViewCategoryPdts()'><b>TC06_ViewCategoryPdts</b><br>Test class: com.OrangeHRM.testcases.Categorytest<br>Parameters: {SubCategory=Tshirts, Email=vprsaran@gmail.com, Category=Men, Password=Testing@123, Hometitle=Automation Exercise}</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at com.OrangeHRM.Utilities.ActionEngine.assertEqualsString_custom(ActionEngine.java:184)
+	at com.OrangeHRM.testcases.Categorytest.TC06_ViewCategoryPdts(Categorytest.java:59)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1264231563", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1264231563'><pre>java.lang.AssertionError: expected [Your product has been added to cart.] but found []
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1012194796", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1012194796'><pre>java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at com.OrangeHRM.testcases.SearchProductAndAddProduct.TC05_SearchandAddpdt(SearchProductAndAddProduct.java:66)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at com.OrangeHRM.Utilities.ActionEngine.assertEqualsString_custom(ActionEngine.java:184)
+	at com.OrangeHRM.testcases.Categorytest.TC06_ViewCategoryPdts(Categorytest.java:59)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -118,8 +118,8 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>72</td>
-<td>com.OrangeHRM.testcases.SearchProductAndAddProduct@566d0c69</td></tr>
+<td>42</td>
+<td>com.OrangeHRM.testcases.Categorytest@4455f57d</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -130,45 +130,35 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.OrangeHRM.testcases.Addproduct.TC04_VerifyaddProduct()'><b>TC04_VerifyaddProduct</b><br>Test class: com.OrangeHRM.testcases.Addproduct<br>Parameters: {Product2price=Rs. 400, Pricelabel=cart_price, Email=vprsaran@gmail.com, Quantity=null, Productconfirmmsg=Your product has been added to cart., ProductTitle=Automation Exercise - All Products, Hometitle=Automation Exercise, Shoppingtitle=Automation Exercise - Checkout, Price=Rs. 500, Productname2=Men Tshirt, Total=null, Productname1=Blue Top, Password=Testing@123}</td>
-<td></td>
-<td>10</td>
-<td>com.OrangeHRM.testcases.Addproduct@4a55a6e8</td></tr>
-<tr>
-<td title='com.OrangeHRM.testcases.Addproduct.TC04_VerifyaddProduct()'><b>TC04_VerifyaddProduct</b><br>Test class: com.OrangeHRM.testcases.Addproduct<br>Parameters: {Product2price=Rs. 700, Pricelabel=cart_price, Email=vprsaran@gmail.com, Quantity=null, Productconfirmmsg=Your product has been added to cart., ProductTitle=Automation Exercise - All Products, Hometitle=Automation Exercise, Shoppingtitle=Automation Exercise - Checkout, Price=Rs. 600, Productname2=Fancy Green Top, Total=null, Productname1=Winter Top, Password=Testing@123}</td>
-<td></td>
-<td>9</td>
-<td>com.OrangeHRM.testcases.Addproduct@4a55a6e8</td></tr>
-<tr>
-<td title='com.OrangeHRM.testcases.Addproduct.TC04_VerifyaddProduct()'><b>TC04_VerifyaddProduct</b><br>Test class: com.OrangeHRM.testcases.Addproduct<br>Parameters: {Product2price=Rs. 278, Pricelabel=cart_price, Email=vprsaran@gmail.com, Quantity=null, Productconfirmmsg=Your product has been added to cart., ProductTitle=Automation Exercise - All Products, Hometitle=Automation Exercise, Shoppingtitle=Automation Exercise - Checkout, Price=Rs. 1000, Productname2=Frozen Tops For Kids, Total=null, Productname1=Madame Top For Women, Password=Testing@123}</td>
-<td></td>
-<td>10</td>
-<td>com.OrangeHRM.testcases.Addproduct@4a55a6e8</td></tr>
-<tr>
-<td title='com.OrangeHRM.testcases.SearchProductAndAddProduct.TC05_SearchandAddpdt()'><b>TC05_SearchandAddpdt</b><br>Test class: com.OrangeHRM.testcases.SearchProductAndAddProduct<br>Parameters: {Product2price=Rs. 400, Pricelabel=cart_price, Email=vprsaran@gmail.com, Quantity=null, Productconfirmmsg=Your product has been added to cart., ProductTitle=Automation Exercise - All Products, Hometitle=Automation Exercise, Shoppingtitle=Automation Exercise - Checkout, Price=Rs. 500, Productname2=Men Tshirt, Total=null, Productname1=Blue Top, Password=Testing@123}</td>
-<td></td>
-<td>12</td>
-<td>com.OrangeHRM.testcases.SearchProductAndAddProduct@566d0c69</td></tr>
-<tr>
-<td title='com.OrangeHRM.testcases.SearchProduct.TC03_searchpdt()'><b>TC03_searchpdt</b><br>Test class: com.OrangeHRM.testcases.SearchProduct<br>Parameters: {Product2price=Rs. 400, Pricelabel=cart_price, Email=vprsaran@gmail.com, Quantity=null, Productconfirmmsg=Your product has been added to cart., ProductTitle=Automation Exercise - All Products, Hometitle=Automation Exercise, Shoppingtitle=Automation Exercise - Checkout, Price=Rs. 500, Productname2=Men Tshirt, Total=null, Productname1=Blue Top, Password=Testing@123}</td>
-<td></td>
-<td>8</td>
-<td>com.OrangeHRM.testcases.SearchProduct@4455f57d</td></tr>
-<tr>
-<td title='com.OrangeHRM.testcases.SearchProductAndAddProduct.TC05_SearchandAddpdt()'><b>TC05_SearchandAddpdt</b><br>Test class: com.OrangeHRM.testcases.SearchProductAndAddProduct<br>Parameters: {Product2price=Rs. 278, Pricelabel=cart_price, Email=vprsaran@gmail.com, Quantity=null, Productconfirmmsg=Your product has been added to cart., ProductTitle=Automation Exercise - All Products, Hometitle=Automation Exercise, Shoppingtitle=Automation Exercise - Checkout, Price=Rs. 1000, Productname2=Frozen Tops For Kids, Total=null, Productname1=Madame Top For Women, Password=Testing@123}</td>
-<td></td>
-<td>19</td>
-<td>com.OrangeHRM.testcases.SearchProductAndAddProduct@566d0c69</td></tr>
-<tr>
-<td title='com.OrangeHRM.testcases.SearchProductAndAddProduct.TC05_SearchandAddpdt()'><b>TC05_SearchandAddpdt</b><br>Test class: com.OrangeHRM.testcases.SearchProductAndAddProduct<br>Parameters: {Product2price=Rs. 700, Pricelabel=cart_price, Email=vprsaran@gmail.com, Quantity=null, Productconfirmmsg=Your product has been added to cart., ProductTitle=Automation Exercise - All Products, Hometitle=Automation Exercise, Shoppingtitle=Automation Exercise - Checkout, Price=Rs. 600, Productname2=Fancy Green Top, Total=null, Productname1=Winter Top, Password=Testing@123}</td>
+<td title='com.OrangeHRM.testcases.Categorytest.TC06_ViewCategoryPdts()'><b>TC06_ViewCategoryPdts</b><br>Test class: com.OrangeHRM.testcases.Categorytest<br>Parameters: {SubCategory=Jeans, Email=vprsaran@gmail.com, Category=Men, Password=Testing@123, Hometitle=Automation Exercise}</td>
 <td></td>
 <td>13</td>
-<td>com.OrangeHRM.testcases.SearchProductAndAddProduct@566d0c69</td></tr>
+<td>com.OrangeHRM.testcases.Categorytest@4455f57d</td></tr>
 <tr>
-<td title='com.OrangeHRM.testcases.Addproduct.TC04_VerifyaddProduct()'><b>TC04_VerifyaddProduct</b><br>Test class: com.OrangeHRM.testcases.Addproduct<br>Parameters: {Product2price=Rs. 315, Pricelabel=cart_price, Email=vprsaran@gmail.com, Quantity=null, Productconfirmmsg=Your product has been added to cart., ProductTitle=Automation Exercise - All Products, Hometitle=Automation Exercise, Shoppingtitle=Automation Exercise - Checkout, Price=Rs. 400, Productname2=Printed Off Shoulder Top - White, Total=null, Productname1=Summer White Top, Password=Testing@123}</td>
+<td title='com.OrangeHRM.testcases.Categorytest.TC06_ViewCategoryPdts()'><b>TC06_ViewCategoryPdts</b><br>Test class: com.OrangeHRM.testcases.Categorytest<br>Parameters: {SubCategory=Dress, Email=vprsaran@gmail.com, Category=Kids, Password=Testing@123, Hometitle=Automation Exercise}</td>
 <td></td>
-<td>9</td>
-<td>com.OrangeHRM.testcases.Addproduct@4a55a6e8</td></tr>
+<td>11</td>
+<td>com.OrangeHRM.testcases.Categorytest@4455f57d</td></tr>
+<tr>
+<td title='com.OrangeHRM.testcases.Categorytest.TC06_ViewCategoryPdts()'><b>TC06_ViewCategoryPdts</b><br>Test class: com.OrangeHRM.testcases.Categorytest<br>Parameters: {SubCategory=Tops & Shirts, Email=vprsaran@gmail.com, Category=Kids, Password=Testing@123, Hometitle=Automation Exercise}</td>
+<td></td>
+<td>13</td>
+<td>com.OrangeHRM.testcases.Categorytest@4455f57d</td></tr>
+<tr>
+<td title='com.OrangeHRM.testcases.Categorytest.TC06_ViewCategoryPdts()'><b>TC06_ViewCategoryPdts</b><br>Test class: com.OrangeHRM.testcases.Categorytest<br>Parameters: {SubCategory=Tops, Email=vprsaran@gmail.com, Category=Women, Password=Testing@123, Hometitle=Automation Exercise}</td>
+<td></td>
+<td>10</td>
+<td>com.OrangeHRM.testcases.Categorytest@4455f57d</td></tr>
+<tr>
+<td title='com.OrangeHRM.testcases.Categorytest.TC06_ViewCategoryPdts()'><b>TC06_ViewCategoryPdts</b><br>Test class: com.OrangeHRM.testcases.Categorytest<br>Parameters: {SubCategory=Dress, Email=vprsaran@gmail.com, Category=Women, Password=Testing@123, Hometitle=Automation Exercise}</td>
+<td></td>
+<td>10</td>
+<td>com.OrangeHRM.testcases.Categorytest@4455f57d</td></tr>
+<tr>
+<td title='com.OrangeHRM.testcases.Categorytest.TC06_ViewCategoryPdts()'><b>TC06_ViewCategoryPdts</b><br>Test class: com.OrangeHRM.testcases.Categorytest<br>Parameters: {SubCategory=Saree, Email=vprsaran@gmail.com, Category=Women, Password=Testing@123, Hometitle=Automation Exercise}</td>
+<td></td>
+<td>11</td>
+<td>com.OrangeHRM.testcases.Categorytest@4455f57d</td></tr>
 </table><p>
 </body>
 </html>

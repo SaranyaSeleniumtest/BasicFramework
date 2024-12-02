@@ -50,8 +50,7 @@ public class Test {
 //		driver.findElement(By.xpath("//div[@class='modal-footer']//button[text()='Continue Shopping']")).click();
 //		driver.switchTo().defaultContent();
 //		driver.findElement(By.linkText("View Product")).click();
-//		
-		
+//	
 		generateemail();
 		
 	}
