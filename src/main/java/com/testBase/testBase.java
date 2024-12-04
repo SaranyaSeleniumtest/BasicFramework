@@ -33,12 +33,12 @@ public class testBase extends ActionEngine {
 		//ExtentFactory.getinstance().getextent().log(Status.PASS,"Environment: "+env);
 		//DriverFactory.getinstance().getdriver().manage().window().maximize();
 		DriverFactory.getinstance().getdriver().get(url);
-		DriverFactory.getinstance().getdriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		DriverFactory.getinstance().getdriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		
 		
 	}
 	
-	@AfterMethod
+	//@AfterMethod
 	public void teardown() {
 		DriverFactory.getinstance().getdriver().quit();;
 		

@@ -3,8 +3,10 @@ package com.OrangeHRM.Utilities;
 import java.io.File;
 import java.io.FileInputStream;
 import java.time.Duration;
+import java.util.Date;
 import java.util.List;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -42,7 +44,7 @@ public class ActionEngine {
 			ExtentFactory.getinstance().getextent().log(Status.PASS,"The value: "+"<b>"+value+ "</b>"+ " is entered in the field "+ fieldname);
 		}catch(Exception e) {
 			//add extent report for failure
-			ExtentFactory.getinstance().getextent().log(Status.FAIL,"The value: "+value+" is not entered in to field: "+fieldname+ "due to exception "+e.getMessage());
+			ExtentFactory.getinstance().getextent().log(Status.FAIL,"The value: "+"<b>"+value+"</b>"+" is not entered in to field: "+fieldname+ "due to exception "+e.getMessage());
 		}
 	}
 
@@ -175,18 +177,32 @@ public class ActionEngine {
 		}
 	}
 	
-	public void assertEqualsString_custom(String expvalue, String actualValue, String locatorName){
+	public void assertEqualsString_custom(String expvalue, String actualValue, String fieldname){
 		try {
 			if(actualValue.equals(expvalue)) {
-				ExtentFactory.getinstance().getextent().log(Status.PASS, "String Assertion is successful on field "+ locatorName + " Expected value was: "+ expvalue + " actual value is: "+actualValue);
+				ExtentFactory.getinstance().getextent().log(Status.PASS, "String Assertion is successful on field "+ "<b>"+fieldname+ "</b>" +" Expected value was: "+ expvalue + " actual value is: "+actualValue);
 			}else {
-				ExtentFactory.getinstance().getextent().log(Status.FAIL, "String Assertion FAILED on field "+ locatorName + " Expected value was: "+ expvalue + " actual value is: "+actualValue);
+				ExtentFactory.getinstance().getextent().log(Status.FAIL, "String Assertion FAILED on field "+ "<b>"+fieldname+ "</b>" +" Expected value was: "+ expvalue + " actual value is: "+actualValue);
 				Assert.assertTrue(false);
 			}
 		} catch (Exception e) {
 			Assert.assertTrue(false, e.toString());
 		}
 	}
+	
+	
+//	public void assertion(String Condition, String fieldname){
+//		try {
+//			if(Assert.assertTrue(true)) {
+//				ExtentFactory.getinstance().getextent().log(Status.PASS, "String Assertion is successful on field "+ "<b>"+fieldname+ "</b>" +" Expected value was: "+ expvalue + " actual value is: "+actualValue);
+//			}else {
+//				ExtentFactory.getinstance().getextent().log(Status.FAIL, "String Assertion FAILED on field "+ "<b>"+fieldname+ "</b>" +" Expected value was: "+ expvalue + " actual value is: "+actualValue);
+//				Assert.assertTrue(false);
+//			}
+//		} catch (Exception e) {
+//			Assert.assertTrue(false, e.toString());
+//		}
+//	}
 
 
 
@@ -194,10 +210,10 @@ public class ActionEngine {
 		String value=null;
 		try {
 			value=ele.getText();
-			ExtentFactory.getinstance().getextent().log(Status.PASS,"The text available for field "+fieldname+ " is "+value);
+			ExtentFactory.getinstance().getextent().log(Status.PASS,"The text available for field " + "<b>"+fieldname+ "</b>" +" is " +value);
 			return value;
 		}catch(Exception e) {
-			ExtentFactory.getinstance().getextent().log(Status.FAIL,"The text not available for field " +fieldname+ "due to exception "+e.getMessage());
+			ExtentFactory.getinstance().getextent().log(Status.FAIL,"The text not available for field " + "<b>"+fieldname+ "</b>" +"due to exception "+e.getMessage());
 		}
 		return value;
 	}
@@ -213,6 +229,38 @@ public class ActionEngine {
 		}
 		return null;
 	}
+	
+	
+	public String handle_alerts(String condition) {
+		try {
+		Alert alert = DriverFactory.getinstance().getdriver().switchTo().alert();
+		switch (condition) {
+		case "getmessage_Accept":
+
+			String alertmsg=alert.getText();
+			alert.accept();
+			return alertmsg;
+			
+		case "OnlyAccept":
+			alert.accept();
+			break;
+		case "Dismiss":
+			alert.dismiss();
+			break;
+		}
+		}catch(Exception e) {
+			ExtentFactory.getinstance().getextent().log(Status.FAIL,"Unable to perform action in alerts due to exception "+e.getMessage());
+		}
+		return null;
+	}
+	
+	public String generate_email() {
+		Date dt= new Date();
+		String email=dt.toString().replace(" ","-").replace(":","");
+		System.out.println(email+"@gmail.com");
+		return email+"@gmail.com";
+	}
+
 	public void capturescreen() {
 		TakesScreenshot screen= (TakesScreenshot)DriverFactory.getinstance().getdriver();
 		File source = screen.getScreenshotAs(OutputType.FILE);

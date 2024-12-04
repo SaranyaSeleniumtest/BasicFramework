@@ -12,7 +12,7 @@ import com.OrangeHRM.Utilities.ExtentFactory;
 import com.OrangeHRM.pageobjects.AddProductpage;
 import com.OrangeHRM.pageobjects.AllTabsPage;
 import com.OrangeHRM.pageobjects.Loginpage;
-import com.OrangeHRM.pageobjects.ProductCheckoutpage;
+import com.OrangeHRM.pageobjects.ViewCartpage;
 import com.OrangeHRM.pageobjects.Productpage;
 import com.OrangeHRM.pageobjects.Shoppingcartpage;
 import com.aventstack.extentreports.Status;
@@ -37,7 +37,7 @@ public class Addproduct extends testBase_old {
 	Productpage pdt= new Productpage();
 	AddProductpage addpdt= new AddProductpage();
 	Shoppingcartpage shopcart= new Shoppingcartpage();
-	ProductCheckoutpage pdtcheckout= new ProductCheckoutpage();
+	ViewCartpage pdtcheckout= new ViewCartpage();
 	
 	
 	ExcelOperations excelopt = new ExcelOperations("AddProduct");

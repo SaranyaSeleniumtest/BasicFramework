@@ -17,8 +17,6 @@ public class Test {
 
 	public void select_Subcategory() {
 		
-	//Adding code to new repo
-		
 	}
 	
 	public void dropdownlst(List<WebElement> options,String compare) {

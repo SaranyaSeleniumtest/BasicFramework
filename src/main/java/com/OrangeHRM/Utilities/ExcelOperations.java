@@ -41,8 +41,9 @@ public class ExcelOperations {
 			
 			if(sh.getRow(row).getCell(i) != null) {
 			sh.getRow(row).getCell(i).setCellType(CellType.STRING);
-			 colval=sh.getRow(row).getCell(i).toString();
 			  colname = sh.getRow(0).getCell(i).toString();
+			 colval=sh.getRow(row).getCell(i).toString();
+			
 			}
 			else {
 				colval="";

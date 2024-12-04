@@ -11,35 +11,27 @@ import com.OrangeHRM.Utilities.ExcelOperations;
 import com.OrangeHRM.Utilities.ExtentFactory;
 import com.OrangeHRM.pageobjects.AddProductpage;
 import com.OrangeHRM.pageobjects.AllTabsPage;
+import com.OrangeHRM.pageobjects.Checkoutpage;
 import com.OrangeHRM.pageobjects.Loginpage;
 import com.OrangeHRM.pageobjects.ViewCartpage;
 import com.OrangeHRM.pageobjects.Productpage;
 import com.OrangeHRM.pageobjects.Shoppingcartpage;
 import com.aventstack.extentreports.Status;
-import com.testBase.testBase_old;
+import com.testBase.testBase;
 
-public class SearchProductAndAddProduct extends testBase_old {
-
-	//	1. Launch browser
-	//	2. Navigate to url 'http://automationexercise.com'
-	//	3. Verify that home page is visible successfully
-	//	4. Click on 'Products' button
-	//	5. Verify user is navigated to ALL PRODUCTS page successfully
-	//	6. Enter product name in search input and click search button
-	//	7. Verify 'SEARCHED PRODUCTS' is visible
-	//	8. Verify all the products related to search are visible
-
+public class EndToEndScenarioTest extends testBase {
 	Loginpage lp= new Loginpage();
 	AllTabsPage tabs= new AllTabsPage();
 	Productpage pdt= new Productpage();
 	AddProductpage addpdt= new AddProductpage();
 	Shoppingcartpage shopcart= new Shoppingcartpage();
 	ViewCartpage pdtcheckout= new ViewCartpage();
+	Checkoutpage chkout= new Checkoutpage();
 	
-	ExcelOperations excelopt = new ExcelOperations("AddProduct");
+	ExcelOperations excelopt = new ExcelOperations("EndToEnd");
 
 	@Test(dataProvider="AddProduct")
-	public void TC05_SearchandAddpdt(Object obj) throws IOException, InterruptedException {
+	public void TC08_verifycheckout(Object obj) throws IOException, InterruptedException {
 		//End to End flow---saranya
 		HashMap<String,String> datatable= (HashMap<String, String>) obj;
 		try {
@@ -63,14 +55,34 @@ public class SearchProductAndAddProduct extends testBase_old {
 			pdt.searchSecondpdt(datatable);
 			assertEqualsString_custom(pdt.validatepdt(),datatable.get("Productname2"),"Product name");
 			pdt.comparepdt_addtocart(datatable.get("Productname2"));
+			
 			Assert.assertEquals(addpdt.getproductconfimation(),datatable.get("Productconfirmmsg"));
 			addpdt.click_viewcart();
+			
 			Assert.assertEquals(shopcart.shopping_gettitle(),datatable.get("Shoppingtitle"));
 			
 			//Verify shopping cart
-			assertEqualsString_custom(pdtcheckout.getproductdetails(datatable.get("Productname1"),datatable.get("Pricelabel")),datatable.get("Price"),"Price");
+			assertEqualsString_custom(pdtcheckout.getproductdetails(datatable.get("Productname1"),datatable.get("Pricelabel")),datatable.get("Product1Price"),"Price");
 			assertEqualsString_custom(pdtcheckout.getproductdetails(datatable.get("Productname2"),datatable.get("Pricelabel")),datatable.get("Product2price"),"Product2_Price");
-
+			pdtcheckout.Clickcheckout();
+			
+			Assert.assertTrue(pdtcheckout.verifycheckoutpage(),"Checkout page mismatched");
+			Assert.assertTrue(pdtcheckout.verifyReviewOrder(), "Review order is not displayed");
+		
+			//Product1 verification
+			assertEqualsString_custom(chkout. getcheckoutdetails(datatable.get("Productname1"),datatable.get("Pricelabel")),datatable.get("Product1price"),"Price");
+			assertEqualsString_custom(chkout. getcheckoutdetails(datatable.get("Productname1"),datatable.get("Quantitylabel")),datatable.get("Product1qty"),"Quantity");
+			assertEqualsString_custom(chkout. getcheckoutdetails(datatable.get("Productname1"),datatable.get("Totallabel")),datatable.get("Product1Total"),"Total");
+			
+			//Product2 verification
+			assertEqualsString_custom(chkout. getcheckoutdetails(datatable.get("Productname2"),datatable.get("Pricelabel")),datatable.get("Product2price"),"Price");
+			assertEqualsString_custom(chkout. getcheckoutdetails(datatable.get("Productname2"),datatable.get("Quantitylabel")),datatable.get("Product2qty"),"Quantity");
+			assertEqualsString_custom(chkout. getcheckoutdetails(datatable.get("Productname2"),datatable.get("Totallabel")),datatable.get("Product2Total"),"Total");
+			
+			
+			//logout
+			tabs.Click_tabs("Logout");
+			
 			ExtentFactory.getinstance().getextent().log(Status.PASS, "Addproduct is successful");
 		}catch(Exception e) {
 			ExtentFactory.getinstance().getextent().log(Status.FAIL, "Addproduct is NOT successful due to following error"+ e.getMessage());	
@@ -91,4 +103,5 @@ public class SearchProductAndAddProduct extends testBase_old {
 
 
 	}
+
 }

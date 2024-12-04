@@ -8,11 +8,9 @@
 	
     <classes>
        
-      
-             <class name="com.OrangeHRM.testcases.ValidateLinks"/>
+       <class name="com.OrangeHRM.testcases.EndToEndScenarioTest"/>
 	    
        
-     
       
     </classes>
   </test> <!-- Test -->
