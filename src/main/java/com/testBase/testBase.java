@@ -38,7 +38,7 @@ public class testBase extends ActionEngine {
 		
 	}
 	
-	//@AfterMethod
+	@AfterMethod
 	public void teardown() {
 		DriverFactory.getinstance().getdriver().quit();;
 		
