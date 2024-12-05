@@ -8,8 +8,8 @@
 	
     <classes>
        
-      
-   <class name="com.OrangeHRM.testcases.EndToEndScenarioTest"/>
+      <class name="com.OrangeHRM.testcases.EndToEndScenarioTest"/>
+	    
 	    
        
       

@@ -6,41 +6,12 @@
   </listeners>
   <test thread-count="5" parallel="methods" name="Logintest(failed)">
     <classes>
-      <class name="com.OrangeHRM.testcases.SearchProductAndAddProduct">
-        <methods>
-          <include name="teardown"/>
-          <include name="launchapp"/>
-          <include name="TC05_SearchandAddpdt" invocation-numbers="0"/>
-        </methods>
-      </class> <!-- com.OrangeHRM.testcases.SearchProductAndAddProduct -->
-      <class name="com.OrangeHRM.testcases.ValidateLinks">
-        <methods>
-          <include name="TC06_Validatealltabs" invocation-numbers="0"/>
-          <include name="launchapp"/>
-          <include name="teardown"/>
-        </methods>
-      </class> <!-- com.OrangeHRM.testcases.ValidateLinks -->
       <class name="com.OrangeHRM.testcases.EndToEndScenarioTest">
         <methods>
           <include name="TC08_verifycheckout" invocation-numbers="0"/>
           <include name="launchapp"/>
-          <include name="teardown"/>
         </methods>
       </class> <!-- com.OrangeHRM.testcases.EndToEndScenarioTest -->
-      <class name="com.OrangeHRM.testcases.Contactustest">
-        <methods>
-          <include name="TC007_verifycontactus" invocation-numbers="0"/>
-          <include name="launchapp"/>
-          <include name="teardown"/>
-        </methods>
-      </class> <!-- com.OrangeHRM.testcases.Contactustest -->
-      <class name="com.OrangeHRM.testcases.Addproduct">
-        <methods>
-          <include name="TC04_VerifyaddProduct" invocation-numbers="0"/>
-          <include name="teardown"/>
-          <include name="launchapp"/>
-        </methods>
-      </class> <!-- com.OrangeHRM.testcases.Addproduct -->
     </classes>
   </test> <!-- Logintest(failed) -->
 </suite> <!-- Failed suite [SmokeTest] -->

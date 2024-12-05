@@ -33,6 +33,7 @@ public class ActionEngine {
 			ExtentFactory.getinstance().getextent().log(Status.PASS, fieldname + " scrolled successfully");
 		}catch(Exception e) {
 			ExtentFactory.getinstance().getextent().log(Status.FAIL, fieldname+ " not scrolled due to exception " +e);
+			Assert.assertTrue(false);
 		}
 	}
 
@@ -45,6 +46,7 @@ public class ActionEngine {
 		}catch(Exception e) {
 			//add extent report for failure
 			ExtentFactory.getinstance().getextent().log(Status.FAIL,"The value: "+"<b>"+value+"</b>"+" is not entered in to field: "+fieldname+ "due to exception "+e.getMessage());
+			Assert.assertTrue(false);	
 		}
 	}
 
@@ -57,6 +59,7 @@ public class ActionEngine {
 		}catch(Exception e) {
 			//add extent report for failure
 			ExtentFactory.getinstance().getextent().log(Status.FAIL, fieldname+ " not clicked due to exception: "+e.getMessage());
+			Assert.assertTrue(false);
 		}
 	}
 
@@ -71,6 +74,7 @@ public class ActionEngine {
 		}catch(Exception e) {
 			//add extent report for failure
 			ExtentFactory.getinstance().getextent().log(Status.FAIL, fieldname + " is NOT selected with value: "+visibletxt +" due to exception: "+e.getMessage());
+			Assert.assertTrue(false);
 		}
 	}
 
@@ -85,7 +89,9 @@ public class ActionEngine {
 		}catch(Exception e) {
 			//add extent report for failure
 			ExtentFactory.getinstance().getextent().log(Status.FAIL, fieldname + " is NOT selected with value: "+value +" due to exception: "+e.getMessage());
+			Assert.assertTrue(false);
 		}
+		
 	}
 
 
@@ -99,6 +105,7 @@ public class ActionEngine {
 		}catch(Exception e) {
 			//add extent report for failure
 			ExtentFactory.getinstance().getextent().log(Status.FAIL, fieldname + " is NOT selected with index: "+index +" due to exception: "+e.getMessage());
+			Assert.assertTrue(false);
 		}
 	}
 
@@ -124,7 +131,8 @@ public class ActionEngine {
 			}
 		}catch(Exception e) {
 			ExtentFactory.getinstance().getextent().log(Status.FAIL,Fieldname +" is not displayed due to exception: "+ e.getMessage());
-					}
+			Assert.assertTrue(false);
+		}
 		return flag;
 
 	}
@@ -135,7 +143,7 @@ public class ActionEngine {
 			Wait.until(ExpectedConditions.visibilityOf(ele));
 		}catch(Exception e) {
 			ExtentFactory.getinstance().getextent().log(Status.FAIL,"Webdriver wait for visibility of element failed due to error: "+e.getMessage());
-
+			Assert.assertTrue(false);
 		}
 	}
 	
@@ -147,7 +155,7 @@ public class ActionEngine {
 			Wait.until(ExpectedConditions.visibilityOfAllElements(ele));
 		}catch(Exception e) {
 			ExtentFactory.getinstance().getextent().log(Status.FAIL,"Webdriver wait for visibility of element failed due to error: "+e.getMessage());
-
+			Assert.assertTrue(false);
 		}
 	}
 
@@ -170,10 +178,12 @@ public class ActionEngine {
 		}
 		if(comparetxt=false){
 			ExtentFactory.getinstance().getextent().log(Status.FAIL,"Drop down list : "+compare+ " is NOT selected");	
+			Assert.assertTrue(false);
 		}
 		}catch(Exception e) {
 			ExtentFactory.getinstance().getextent().log(Status.FAIL,"Drop down list : "+compare+ " is NOT selected due to exception "+ e.getMessage());
 			System.out.println("Exception "+e.getMessage());
+			Assert.assertTrue(false);
 		}
 	}
 	
@@ -214,6 +224,7 @@ public class ActionEngine {
 			return value;
 		}catch(Exception e) {
 			ExtentFactory.getinstance().getextent().log(Status.FAIL,"The text not available for field " + "<b>"+fieldname+ "</b>" +"due to exception "+e.getMessage());
+			Assert.assertTrue(false);
 		}
 		return value;
 	}
@@ -226,6 +237,7 @@ public class ActionEngine {
 			return title;
 		}catch(Exception e) {
 			ExtentFactory.getinstance().getextent().log(Status.FAIL,"Unable to fetch: " +Fieldname+ "page title: due to exception "+e.getMessage());
+			Assert.assertTrue(false);
 		}
 		return null;
 	}
@@ -250,6 +262,7 @@ public class ActionEngine {
 		}
 		}catch(Exception e) {
 			ExtentFactory.getinstance().getextent().log(Status.FAIL,"Unable to perform action in alerts due to exception "+e.getMessage());
+			Assert.assertTrue(false);
 		}
 		return null;
 	}

@@ -32,7 +32,5 @@ public class ViewCartpage extends testBase {
 		return isdisplayed(DriverFactory.getinstance().getdriver().findElement(breadcrum_checkout), "Checkoutpage");
 	}
 	
-//	public void ReviewYourorder() {
-//		String tablexpath=	
-//	}
+
 }
