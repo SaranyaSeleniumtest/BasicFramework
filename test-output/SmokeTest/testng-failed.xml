@@ -6,12 +6,13 @@
   </listeners>
   <test thread-count="5" parallel="methods" name="Logintest(failed)">
     <classes>
-      <class name="com.OrangeHRM.testcases.EndToEndScenarioTest">
+      <class name="com.OrangeHRM.testcases.CartTest">
         <methods>
-          <include name="TC08_verifycheckout" invocation-numbers="0"/>
+          <include name="validatecart" invocation-numbers="0"/>
           <include name="launchapp"/>
+          <include name="teardown"/>
         </methods>
-      </class> <!-- com.OrangeHRM.testcases.EndToEndScenarioTest -->
+      </class> <!-- com.OrangeHRM.testcases.CartTest -->
     </classes>
   </test> <!-- Logintest(failed) -->
 </suite> <!-- Failed suite [SmokeTest] -->

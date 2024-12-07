@@ -3,8 +3,10 @@ package com.OrangeHRM.Utilities;
 import java.io.File;
 import java.io.FileInputStream;
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.JavascriptExecutor;
@@ -274,6 +276,20 @@ public class ActionEngine {
 		return email+"@gmail.com";
 	}
 
+	public static void handlewindows1() {
+		String win1title = driver.getTitle();
+		System.out.println(win1title);
+		Set<String> windowHandles = driver.getWindowHandles();
+		List<String> win=new ArrayList<String>(windowHandles);
+
+		String win1=win.get(0);
+		String win2=win.get(1);
+		driver.switchTo().window(win2);
+		System.out.println("title of window2  "+driver.getTitle());
+		driver.switchTo().window(win1);
+		System.out.println("title of window1  "+driver.getTitle());
+	}
+	
 	public void capturescreen() {
 		TakesScreenshot screen= (TakesScreenshot)DriverFactory.getinstance().getdriver();
 		File source = screen.getScreenshotAs(OutputType.FILE);

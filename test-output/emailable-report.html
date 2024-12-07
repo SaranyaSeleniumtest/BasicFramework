@@ -9,10 +9,16 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">SmokeTest</th></tr>
-<tr><td><a href="#t0">Logintest</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">29,059</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Logintest</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">16,834</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">SmokeTest</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Logintest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.OrangeHRM.testcases.EndToEndScenarioTest</td><td><a href="#m0">TC08_verifycheckout</a></td><td rowspan="1">1733404725734</td><td rowspan="1">23430</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">SmokeTest</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Logintest &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.OrangeHRM.testcases.CartTest</td><td><a href="#m0">validatecart</a></td><td rowspan="1">1733469022522</td><td rowspan="1">10182</td></tr></tbody>
 </table>
-<h2>Logintest</h2><h3 id="m0">com.OrangeHRM.testcases.EndToEndScenarioTest#TC08_verifycheckout</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{Product2price=Rs. 400, Pricelabel=cart_price, Product2qty=1, Email=vprsaran@gmail.com, payeename=Tester, Product1Total=Rs. 500, Totallabel=cart_total, Product1qty=1, yearexpiry=2024, monthexpiry=11, TotalAmount=Rs. 900, Productconfirmmsg=Your product has been added to cart., ProductTitle=Automation Exercise - All Products, Hometitle=Automation Exercise, Quantitylabel=cart_quantity, cvc=311, Shoppingtitle=Automation Exercise - Checkout, cardnum=12345, Product1price=Rs. 500, Productname2=Summer White Top, Productname1=Blue Top, Product2Total=Rs. 400, Password=Testing@123}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Logintest</h2><h3 id="m0">com.OrangeHRM.testcases.CartTest#validatecart</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{Email=vprsaran@gmail.com, Tabtitle=Automation Exercise - Checkout, Tabnames=Cart, Password=Testing@123}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
+	at com.OrangeHRM.Utilities.ActionEngine.assertEqualsString_custom(ActionEngine.java:196)
+	at com.OrangeHRM.testcases.CartTest.validatecart(CartTest.java:37)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+... Removed 16 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
