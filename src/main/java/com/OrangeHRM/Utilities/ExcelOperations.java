@@ -13,6 +13,7 @@ public class ExcelOperations {
 	public ExcelOperations(String sheetname) {
 		try {
 		String file=System.getProperty("user.dir")+Propertiesfile.getpropval("testdataloc");
+		System.out.println(file);
 		FileInputStream fis= new FileInputStream(file);
 		wb= new XSSFWorkbook(fis);
 		sh=wb.getSheet(sheetname);
@@ -41,8 +42,9 @@ public class ExcelOperations {
 			
 			if(sh.getRow(row).getCell(i) != null) {
 			sh.getRow(row).getCell(i).setCellType(CellType.STRING);
-			 colval=sh.getRow(row).getCell(i).toString();
 			  colname = sh.getRow(0).getCell(i).toString();
+			 colval=sh.getRow(row).getCell(i).toString();
+			
 			}
 			else {
 				colval="";

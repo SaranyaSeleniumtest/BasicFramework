@@ -103,7 +103,7 @@
                     <div class="method-list-content passed suite-SmokeTest">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-SmokeTest" title="com.OrangeHRM.testcases.Addproduct" class="method navigator-link" hash-for-method="TC04_VerifyaddProduct({Product2price=Rs. 400, Pricelabel=cart_price, Email=vprsaran@gmail.com, Quantity=null, Productconfi...)">TC04_VerifyaddProduct({Product2price=Rs. 400, Pricelabel=cart_price, Email=vprsaran@gmail.com, Quantity=null, Productconfi...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-SmokeTest" title="com.OrangeHRM.testcases.Logintest" class="method navigator-link" hash-for-method="TC001_logintest({Email=vprsaran@gmail.com, Tabtitle=Automation Exercise - Checkout, Tabnames=Cart, Password=Testing@...)">TC001_logintest({Email=vprsaran@gmail.com, Tabtitle=Automation Exercise - Checkout, Tabnames=Cart, Password=Testing@...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-SmokeTest -->
@@ -121,15 +121,15 @@
           <div class="suite-SmokeTest-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.OrangeHRM.testcases.Addproduct</span>
+              <span class="class-name">com.OrangeHRM.testcases.Logintest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="TC04_VerifyaddProduct({Product2price=Rs. 400, Pricelabel=cart_price, Email=vprsaran@gmail.com, Quantity=null, Productconfi...)">
-                  </a> <!-- TC04_VerifyaddProduct({Product2price=Rs. 400, Pricelabel=cart_price, Email=vprsaran@gmail.com, Quantity=null, Productconfi...) -->
-                  <span class="method-name">TC04_VerifyaddProduct</span>
-                  <span class="parameters">({Product2price=Rs. 400, Pricelabel=cart_price, Email=vprsaran@gmail.com, Quantity=null, Productconfirmmsg=Your product has been added to cart., Hometitle=Automation Exercise, Shoppingtitle=Automation Exercise - Checkout, Price=Rs. 500, Productname2=Men Tshirt, Total=null, Productname1=Blue Top, Password=Testing@123})</span>
+                  <a name="TC001_logintest({Email=vprsaran@gmail.com, Tabtitle=Automation Exercise - Checkout, Tabnames=Cart, Password=Testing@...)">
+                  </a> <!-- TC001_logintest({Email=vprsaran@gmail.com, Tabtitle=Automation Exercise - Checkout, Tabnames=Cart, Password=Testing@...) -->
+                  <span class="method-name">TC001_logintest</span>
+                  <span class="parameters">({Email=vprsaran@gmail.com, Tabtitle=Automation Exercise - Checkout, Tabnames=Cart, Password=Testing@123})</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -144,14 +144,15 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;SmokeTest&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;com.OrangeHRM.Utilities.ListnersManager&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Logintest&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Chrometest&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.OrangeHRM.testcases.Addproduct&quot;/&gt;
+      &lt;class name=&quot;com.OrangeHRM.testcases.Logintest&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Logintest --&gt;
+  &lt;/test&gt; &lt;!-- Chrometest --&gt;
 &lt;/suite&gt; &lt;!-- SmokeTest --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -163,7 +164,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Logintest (1 class)</span>
+                <span class="test-name">Chrometest (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -191,14 +192,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'TC04_VerifyaddProduct')
-data.setCell(0, 2, 'com.OrangeHRM.testcases.Addproduct')
-data.setCell(0, 3, 106682);
+data.setCell(0, 1, 'TC001_logintest')
+data.setCell(0, 2, 'com.OrangeHRM.testcases.Logintest')
+data.setCell(0, 3, 7045);
 window.suiteTableData['SmokeTest']= { tableData: data, tableDiv: 'times-div-SmokeTest'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 7 seconds</span>
               <div id="times-div-SmokeTest">
               </div> <!-- times-div-SmokeTest -->
             </div> <!-- times-div -->
@@ -224,18 +225,18 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.OrangeHRM.testcases.Addproduct</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.OrangeHRM.testcases.Logintest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">launchapp</span>
+                <span class="method-name">launchapp(chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">TC04_VerifyaddProduct({Product2price=Rs. 400, Pricelabel=cart_price, Email=vprsaran@gmail.com, Quantity=null, Productconfi...)</span>
-                <span class="method-start">8075 ms</span>
+                <span class="method-name">TC001_logintest({Email=vprsaran@gmail.com, Tabtitle=Automation Exercise - Checkout, Tabnames=Cart, Password=Testing@...)</span>
+                <span class="method-start">10812 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">114760 ms</span>
+                <span class="method-start">17861 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

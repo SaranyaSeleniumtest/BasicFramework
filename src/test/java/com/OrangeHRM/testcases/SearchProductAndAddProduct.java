@@ -12,7 +12,7 @@ import com.OrangeHRM.Utilities.ExtentFactory;
 import com.OrangeHRM.pageobjects.AddProductpage;
 import com.OrangeHRM.pageobjects.AllTabsPage;
 import com.OrangeHRM.pageobjects.Loginpage;
-import com.OrangeHRM.pageobjects.ProductCheckoutpage;
+import com.OrangeHRM.pageobjects.ViewCartpage;
 import com.OrangeHRM.pageobjects.Productpage;
 import com.OrangeHRM.pageobjects.Shoppingcartpage;
 import com.aventstack.extentreports.Status;
@@ -34,36 +34,40 @@ public class SearchProductAndAddProduct extends testBase_old {
 	Productpage pdt= new Productpage();
 	AddProductpage addpdt= new AddProductpage();
 	Shoppingcartpage shopcart= new Shoppingcartpage();
-	ProductCheckoutpage pdtcheckout= new ProductCheckoutpage();
+	ViewCartpage pdtcheckout= new ViewCartpage();
 	
-	ExcelOperations excelopt = new ExcelOperations("SearchProduct");
+	ExcelOperations excelopt = new ExcelOperations("AddProduct");
 
-	@Test(dataProvider="search")
-	public void TC03_searchpdt(Object obj) throws IOException, InterruptedException {
+	@Test(dataProvider="AddProduct",groups ={"functional"})
+	public void TC05_SearchandAddpdt(Object obj) throws IOException, InterruptedException {
+		//End to End flow---saranya
 		HashMap<String,String> datatable= (HashMap<String, String>) obj;
 		try {
+			//login
 			lp.loginapp(datatable);
 			Assert.assertEquals(gettitle("Homepage"),datatable.get("Hometitle"),"Title mismatched");
-
+			
+			//pdt search
 			tabs.Click_Pdt();
 			Assert.assertTrue(pdt.verifytitle(),"Product Title mismatched");
 			pdt.searchpdt(datatable);
-			Assert.assertEquals(pdt.validatepdt(),datatable.get("Productname"),"Product mismatched");
-//
-			pdt.selectproduct(1);
+			Assert.assertEquals(pdt.validatepdt(),datatable.get("Productname1"),"Product mismatched");
+			
+			//search and add 2 pdts
+			pdt.comparepdt_addtocart(datatable.get("Productname1"));
 			
 			Assert.assertEquals(addpdt.getproductconfimation(),datatable.get("Productconfirmmsg"));
 			
 			addpdt.click_continueshop();
-			Assert.assertTrue(pdt.verifytitle(),"Product Title mismatched");
-			
-			pdt.selectproduct(2);
+			assertEqualsString_custom(gettitle("AllProducts"),datatable.get("ProductTitle"),"ProductTitle");
+			pdt.searchSecondpdt(datatable);
+			assertEqualsString_custom(pdt.validatepdt(),datatable.get("Productname2"),"Product name");
+			pdt.comparepdt_addtocart(datatable.get("Productname2"));
 			Assert.assertEquals(addpdt.getproductconfimation(),datatable.get("Productconfirmmsg"));
 			addpdt.click_viewcart();
 			Assert.assertEquals(shopcart.shopping_gettitle(),datatable.get("Shoppingtitle"));
 			
-//			Assert.assertEquals(pdtcheckout.getproductdetails(datatable.get("Productname1"),datatable.get("Pricelabel")),datatable.get("Price"));
-			//Assert.assertEquals(pdtcheckout.getproductdetails(datatable.get("Productname1"),"cart_total"),"2000");
+			//Verify shopping cart
 			assertEqualsString_custom(pdtcheckout.getproductdetails(datatable.get("Productname1"),datatable.get("Pricelabel")),datatable.get("Price"),"Price");
 			assertEqualsString_custom(pdtcheckout.getproductdetails(datatable.get("Productname2"),datatable.get("Pricelabel")),datatable.get("Product2price"),"Product2_Price");
 
@@ -73,7 +77,7 @@ public class SearchProductAndAddProduct extends testBase_old {
 		}
 	}
 
-	@DataProvider(name="search")
+	@DataProvider(name="AddProduct")
 	public Object[][] searchdata() {
 		Object[][] obj= new Object[excelopt.getrow()][1];
 		int rowcnt = excelopt.getrow();

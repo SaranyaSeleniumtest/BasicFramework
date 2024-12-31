@@ -12,13 +12,14 @@ import com.OrangeHRM.Utilities.ExtentFactory;
 import com.OrangeHRM.pageobjects.AddProductpage;
 import com.OrangeHRM.pageobjects.AllTabsPage;
 import com.OrangeHRM.pageobjects.Loginpage;
-import com.OrangeHRM.pageobjects.ProductCheckoutpage;
+import com.OrangeHRM.pageobjects.ViewCartpage;
 import com.OrangeHRM.pageobjects.Productpage;
 import com.OrangeHRM.pageobjects.Shoppingcartpage;
 import com.aventstack.extentreports.Status;
 import com.testBase.testBase_old;
 
 public class Addproduct extends testBase_old {
+	//This is add product tc
 //TestCase details
 //	1. Launch browser
 //	2. Navigate to url 'http://automationexercise.com'
@@ -36,7 +37,7 @@ public class Addproduct extends testBase_old {
 	Productpage pdt= new Productpage();
 	AddProductpage addpdt= new AddProductpage();
 	Shoppingcartpage shopcart= new Shoppingcartpage();
-	ProductCheckoutpage pdtcheckout= new ProductCheckoutpage();
+	ViewCartpage pdtcheckout= new ViewCartpage();
 	
 	
 	ExcelOperations excelopt = new ExcelOperations("AddProduct");
@@ -62,8 +63,7 @@ public class Addproduct extends testBase_old {
 			addpdt.click_viewcart();
 			Assert.assertEquals(shopcart.shopping_gettitle(),datatable.get("Shoppingtitle"));
 			
-//			Assert.assertEquals(pdtcheckout.getproductdetails(datatable.get("Productname1"),datatable.get("Pricelabel")),datatable.get("Price"));
-			//Assert.assertEquals(pdtcheckout.getproductdetails(datatable.get("Productname1"),"cart_total"),"2000");
+		
 			assertEqualsString_custom(pdtcheckout.getproductdetails(datatable.get("Productname1"),datatable.get("Pricelabel")),datatable.get("Price"),"Price");
 			assertEqualsString_custom(pdtcheckout.getproductdetails(datatable.get("Productname2"),datatable.get("Pricelabel")),datatable.get("Product2price"),"Product2_Price");
 

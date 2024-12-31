@@ -2,31 +2,38 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-11-21T12:45:09 IST" name="SmokeTest" finished-at="2024-11-21T12:47:04 IST" duration-ms="115256">
+  <suite started-at="2024-12-28T16:25:15 IST" name="SmokeTest" finished-at="2024-12-28T16:25:35 IST" duration-ms="19700">
     <groups>
     </groups>
-    <test started-at="2024-11-21T12:45:09 IST" name="Logintest" finished-at="2024-11-21T12:47:04 IST" duration-ms="115256">
-      <class name="com.OrangeHRM.testcases.Addproduct">
-        <test-method is-config="true" signature="launchapp()[pri:0, instance:com.OrangeHRM.testcases.Addproduct@1bbae752]" started-at="2024-11-21T12:45:09 IST" name="launchapp" finished-at="2024-11-21T12:45:17 IST" duration-ms="8074" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchapp -->
-        <test-method signature="TC04_VerifyaddProduct(java.lang.Object)[pri:0, instance:com.OrangeHRM.testcases.Addproduct@1bbae752]" started-at="2024-11-21T12:45:17 IST" name="TC04_VerifyaddProduct" data-provider="addproduct" finished-at="2024-11-21T12:47:04 IST" duration-ms="106682" status="PASS">
+    <test started-at="2024-12-28T16:25:15 IST" name="Chrometest" finished-at="2024-12-28T16:25:35 IST" duration-ms="19700">
+      <class name="com.OrangeHRM.testcases.Logintest">
+        <test-method is-config="true" signature="launchapp(java.lang.String)[pri:0, instance:com.OrangeHRM.testcases.Logintest@25d3cfc8]" started-at="2024-12-28T16:25:16 IST" name="launchapp" finished-at="2024-12-28T16:25:26 IST" duration-ms="10811" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{Product2price=Rs. 400, Pricelabel=cart_price, Email=vprsaran@gmail.com, Quantity=null, Productconfirmmsg=Your product has been added to cart., Hometitle=Automation Exercise, Shoppingtitle=Automation Exercise - Checkout, Price=Rs. 500, Productname2=Men Tshirt, Total=null, Productname1=Blue Top, Password=Testing@123}]]>
+                <![CDATA[chrome]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC04_VerifyaddProduct -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.OrangeHRM.testcases.Addproduct@1bbae752]" started-at="2024-11-21T12:47:04 IST" name="teardown" finished-at="2024-11-21T12:47:04 IST" duration-ms="320" status="PASS">
+        </test-method> <!-- launchapp -->
+        <test-method signature="TC001_logintest(java.lang.Object)[pri:0, instance:com.OrangeHRM.testcases.Logintest@25d3cfc8]" started-at="2024-12-28T16:25:26 IST" name="TC001_logintest" data-provider="lgdata" finished-at="2024-12-28T16:25:33 IST" duration-ms="7045" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Email=vprsaran@gmail.com, Tabtitle=Automation Exercise - Checkout, Tabnames=Cart, Password=Testing@123}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC001_logintest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.OrangeHRM.testcases.Logintest@25d3cfc8]" started-at="2024-12-28T16:25:33 IST" name="teardown" finished-at="2024-12-28T16:25:35 IST" duration-ms="1484" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- com.OrangeHRM.testcases.Addproduct -->
-    </test> <!-- Logintest -->
+      </class> <!-- com.OrangeHRM.testcases.Logintest -->
+    </test> <!-- Chrometest -->
   </suite> <!-- SmokeTest -->
 </testng-results>

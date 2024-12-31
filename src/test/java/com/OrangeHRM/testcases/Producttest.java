@@ -19,7 +19,7 @@ public class Producttest extends testBase_old {
 	
 	ExcelOperations excelopt= new ExcelOperations("Login");
 	
-	@Test(dataProvider="pdtdata")
+	@Test(dataProvider="pdtdata",groups={"functional"})
 	public void TC02_ViewProduct(Object obj1) throws InterruptedException {
 		HashMap<String,String> hm= (HashMap<String,String>)obj1;
 		lp.loginapp(hm);

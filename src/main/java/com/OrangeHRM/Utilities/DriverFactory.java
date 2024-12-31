@@ -20,6 +20,7 @@ public class DriverFactory {
 	
 	public void setdriver(WebDriver driverparam) {
 		driver.set(driverparam);
+		
 	}
 	
 	public WebDriver getdriver() {

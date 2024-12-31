@@ -63,7 +63,7 @@ public class ListnersManager implements ITestListener {
 	@Override
 	public void onTestFailure(ITestResult result) {
 		ExtentFactory.getinstance().getextent().log(Status.FAIL, "Testcase " +result.getMethod().getMethodName()+ " is failed.");
-		ExtentFactory.getinstance().getextent().log(Status.FAIL, result.getThrowable());
+		//ExtentFactory.getinstance().getextent().log(Status.FAIL, result.getThrowable());
 		//add screenshot code
 		TakesScreenshot screen= (TakesScreenshot)DriverFactory.getinstance().getdriver();
 		File source = screen.getScreenshotAs(OutputType.FILE);
@@ -71,7 +71,7 @@ public class ListnersManager implements ITestListener {
 		try {
 			File Destination= new File(path_screen);
 			source.renameTo(Destination);
-			test.addScreenCaptureFromPath(path_screen);
+			ExtentFactory.getinstance().getextent().addScreenCaptureFromPath(path_screen);
 			ExtentFactory.getinstance().removeExtentobj();
 		}catch(Exception e) {
 			System.out.println(e.getMessage());

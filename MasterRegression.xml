@@ -12,7 +12,12 @@
        <class name="com.OrangeHRM.testcases.Producttest"/>
        <class name="com.OrangeHRM.testcases.SearchProduct"/>
        <class name="com.OrangeHRM.testcases.Addproduct"/>
-      
+       <class name="com.OrangeHRM.testcases.SearchProductAndAddProduct"/>
+       <class name="com.OrangeHRM.testcases.Categorytest"/>
+	   <class name="com.OrangeHRM.testcases.ValidateLinks"/>
+	   <class name="com.OrangeHRM.testcases.Contactustest"/>
+	    <class name="com.OrangeHRM.testcases.CartTest"/>
+	    <class name="com.OrangeHRM.testcases.EndToEndScenarioTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- SmokeTest -->

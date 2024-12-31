@@ -24,7 +24,8 @@ public class Productpage extends testBase_old {
 	By txt_search=By.id("search_product");
 	By btn_search=By.id("submit_search");
 	By ele_pdtname=By.xpath("//div[@class='productinfo text-center']//p");
-	
+	By lnk_addpdt=By.linkText("Add to cart");
+
 	
 	public boolean verifytitle() {
 		
@@ -48,11 +49,18 @@ public class Productpage extends testBase_old {
 	
 	
 	public void searchpdt(HashMap<String,String>hm) {
-		sendKeys(DriverFactory.getinstance().getdriver().findElement(txt_search),hm.get("Productname"), "Searchtxt");
+		System.out.println(hm.get("Productname1"));
+		sendKeys(DriverFactory.getinstance().getdriver().findElement(txt_search),hm.get("Productname1"), "Searchtxt");
+		click(DriverFactory.getinstance().getdriver().findElement(btn_search), "Searchbtn");
+	}
+	
+	public void searchSecondpdt(HashMap<String,String>hm) {
+		sendKeys(DriverFactory.getinstance().getdriver().findElement(txt_search),hm.get("Productname2"), "Searchtxt");
 		click(DriverFactory.getinstance().getdriver().findElement(btn_search), "Searchbtn");
 	}
 	
 	public String validatepdt() {
+		webdriverwait_visibility(DriverFactory.getinstance().getdriver().findElement(ele_pdtname),60);
 		return gettext(DriverFactory.getinstance().getdriver().findElement(ele_pdtname), "Productname");
 	}
 	
@@ -60,6 +68,44 @@ public class Productpage extends testBase_old {
 		String xpath="//div[@class='productinfo text-center']//a[text()='Add to cart'  and  @data-product-id='"+productnumber+"']";
 		click(DriverFactory.getinstance().getdriver().findElement(By.xpath(xpath)),"Product"+productnumber);
 	
+	}
+	
+	public void comparepdt_addtocart(String pdt) {
+		try {
+		
+			if(gettext(DriverFactory.getinstance().getdriver().findElement(ele_pdtname),"pdt").equalsIgnoreCase(pdt)){
+				ExtentFactory.getinstance().getextent().log(Status.PASS,pdt+" :Product search is successful");
+				webdriverwait_visibility(DriverFactory.getinstance().getdriver().findElement(lnk_addpdt),30);
+				click(DriverFactory.getinstance().getdriver().findElement(lnk_addpdt),pdt);		
+				
+			}else {
+				ExtentFactory.getinstance().getextent().log(Status.FAIL,pdt+" :Product search is NOT successful");
+			}
+			
+		
+		}catch(Exception e) {
+			ExtentFactory.getinstance().getextent().log(Status.FAIL,pdt+" :Product search is NOT successful due to exception: "+e.getMessage());
+		}
+	}
+	//INTERVIEWCODE
+	public void viewcategory(String category) {
+		//String xpath="//a[@href='#Men']" /INTERVIEWCODE
+		try {
+		String xpath="//a[@href='#"+category+"']";
+		
+		click(DriverFactory.getinstance().getdriver().findElement(By.xpath(xpath)),"Category- "+category);
+		}catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
+	
+//	/INTERVIEWCODE
+	public void selectSubCategory(String category,String subcategory) {
+		subcategory=subcategory.toUpperCase();
+		System.out.println(subcategory);
+		String customxpath="//div[@id='"+category+"']//ul//li//a";
+		webdriverwait_visibility(DriverFactory.getinstance().getdriver().findElements(By.xpath(customxpath)),30);
+		dropdownlst(DriverFactory.getinstance().getdriver().findElements(By.xpath(customxpath)),subcategory );
 	}
 	
 }

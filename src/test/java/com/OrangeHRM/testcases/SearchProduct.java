@@ -13,10 +13,10 @@ import com.OrangeHRM.pageobjects.AllTabsPage;
 import com.OrangeHRM.pageobjects.Loginpage;
 import com.OrangeHRM.pageobjects.Productpage;
 import com.aventstack.extentreports.Status;
-import com.testBase.testBase_old;
+import com.testBase.testBase;
 
-public class SearchProduct extends testBase_old {
-
+public class SearchProduct extends testBase {
+	//Search Product tc-saranyacode
 	//	1. Launch browser
 	//	2. Navigate to url 'http://automationexercise.com'
 	//	3. Verify that home page is visible successfully
@@ -32,7 +32,7 @@ public class SearchProduct extends testBase_old {
 	
 	ExcelOperations excelopt = new ExcelOperations("SearchProduct");
 
-	@Test(dataProvider="search")
+	@Test(dataProvider="search",groups={"funtional"})
 	public void TC03_searchpdt(Object obj) throws IOException, InterruptedException {
 		HashMap<String,String> datatable= (HashMap<String, String>) obj;
 		try {
@@ -42,14 +42,14 @@ public class SearchProduct extends testBase_old {
 			tabs.Click_Pdt();
 			Assert.assertTrue(pdt.verifytitle(),"Product Title mismatched");
 			pdt.searchpdt(datatable);
-			Assert.assertEquals(pdt.validatepdt(),datatable.get("Productname"),"Product mismatched");
+			Assert.assertEquals(pdt.validatepdt(),datatable.get("Productname1"),"Product mismatched");
 			ExtentFactory.getinstance().getextent().log(Status.PASS, "Product related search is successful");
 		}catch(Exception e) {
 			ExtentFactory.getinstance().getextent().log(Status.FAIL, "Product related search is NOT successful due to following error"+ e.getMessage());	
 		}
 	}
 
-	@DataProvider(name="search")
+	@DataProvider(name="search",indices= {0})
 	public Object[][] searchdata() {
 		Object[][] obj= new Object[excelopt.getrow()][1];
 		int rowcnt = excelopt.getrow();
@@ -57,6 +57,7 @@ public class SearchProduct extends testBase_old {
 		for(int j=1;j<=rowcnt;j++) {
 			HashMap<String, String> testdata = ExcelOperations.gethashvalue(j);
 			obj[j-1][0]=testdata;
+			
 		}
 
 		return obj;

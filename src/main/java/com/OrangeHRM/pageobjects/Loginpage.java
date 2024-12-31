@@ -3,19 +3,20 @@ package com.OrangeHRM.pageobjects;
 import java.util.HashMap;
 
 import org.openqa.selenium.By;
+import org.testng.Assert;
 
 import com.OrangeHRM.Utilities.DriverFactory;
-import com.testBase.testBase_old;
+import com.testBase.testBase;
 
-public class Loginpage extends testBase_old {
+public class Loginpage extends testBase {
 
-	By txtpassword=By.name("password");
+	private By txtpassword=By.name("password");
 	
-	By txtemail=By.name("email");
+	private By txtemail=By.name("email");
 	
-	By btnLogin=By.xpath("//button[@type='submit' and text()='Login']");
+	private By btnLogin=By.xpath("//button[@type='submit' and text()='Login']");
 	
-	By lnkLogin= By.xpath("//a[contains(text(),'Login')]");
+	private By lnkLogin= By.xpath("//a[contains(text(),'Login')]");
 	
 	
 	
@@ -31,6 +32,23 @@ public class Loginpage extends testBase_old {
 		click(DriverFactory.getinstance().getdriver().findElement(btnLogin),"Login_btn");
 		}catch(Exception e)	{
 			System.out.println("The exception is " +e.getMessage());
+			Assert.fail();
+		}
+	}
+	
+	
+	public void loginapp(String user,String pass) throws InterruptedException {
+		try {
+		click(DriverFactory.getinstance().getdriver().findElement(lnkLogin),"Login_lnk");
+		sendKeys(DriverFactory.getinstance().getdriver().findElement(txtemail),user,"EmailAddress");
+		Thread.sleep(3000);
+		System.out.println(user);
+		System.out.println(pass);
+		sendKeys(DriverFactory.getinstance().getdriver().findElement(txtpassword),pass,"Password");
+		click(DriverFactory.getinstance().getdriver().findElement(btnLogin),"Login_btn");
+		}catch(Exception e)	{
+			System.out.println("The exception is " +e.getMessage());
+			Assert.fail();
 		}
 	}
 }

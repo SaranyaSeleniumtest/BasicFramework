@@ -6,20 +6,24 @@ import java.time.Duration;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 
 import com.OrangeHRM.Utilities.ActionEngine;
 import com.OrangeHRM.Utilities.BrowserFactory;
 import com.OrangeHRM.Utilities.DriverFactory;
 import com.OrangeHRM.Utilities.Propertiesfile;
+import com.OrangeHRM.pageobjects.AllTabsPage;
+import com.OrangeHRM.pageobjects.Loginpage;
 
 public class testBase extends ActionEngine {
 	public BrowserFactory bf= new BrowserFactory();
 
 	
-	
+	@Parameters({"browser"})
 	@BeforeMethod
-	public void launchapp() throws IOException {
-		String browser=Propertiesfile.getpropval("browser");
+	public void launchapp(String brow) throws IOException {
+		//String browser=Propertiesfile.getpropval("browser");
+		String browser= brow;
 		System.out.println(browser);
 		String url=Propertiesfile.getpropval("url");
 		System.out.println(Propertiesfile.getpropval("environment"));
@@ -31,9 +35,9 @@ public class testBase extends ActionEngine {
 		WebDriver driver = bf.setbrowser(browser);
 		DriverFactory.getinstance().setdriver(driver);
 		//ExtentFactory.getinstance().getextent().log(Status.PASS,"Environment: "+env);
-		DriverFactory.getinstance().getdriver().manage().window().maximize();
+		//DriverFactory.getinstance().getdriver().manage().window().maximize();
 		DriverFactory.getinstance().getdriver().get(url);
-		DriverFactory.getinstance().getdriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		DriverFactory.getinstance().getdriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		
 		
 	}

@@ -3,15 +3,19 @@ package com.OrangeHRM.testcases;
 import java.util.HashMap;
 
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.OrangeHRM.Utilities.ExcelOperations;
 import com.OrangeHRM.pageobjects.Loginpage;
+import com.testBase.testBase;
 import com.testBase.testBase_old;
 
-public class Logintest extends testBase_old {
-	 Loginpage lp= new Loginpage();
+public class Logintest extends testBase {
+	//This s login-saranyacode
+	Loginpage lp= new Loginpage();
 	ExcelOperations excelopt= new ExcelOperations("Login");
+	
 	
 	@Test(dataProvider="lgdata")
 	public void TC001_logintest(Object obj1) throws InterruptedException {
@@ -20,7 +24,7 @@ public class Logintest extends testBase_old {
 		
 		}
 	
-	@DataProvider(name="lgdata",indices= {0,2})
+	@DataProvider(name="lgdata",indices= {0})
 	public Object[][] logindata() {
 		
 		Object[][] obj= new Object[excelopt.getrow()][1];

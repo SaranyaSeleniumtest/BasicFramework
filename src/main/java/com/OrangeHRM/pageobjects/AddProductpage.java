@@ -10,13 +10,13 @@ import com.testBase.testBase_old;
 
 public class AddProductpage extends testBase_old {
 	
-	By msg_productconfirm=By.xpath("//div[@class='modal-body']//p[text()='Your product has been added to cart.']");
-	By btn_continueshop=By.xpath("//div[@class='modal-footer']//button[text()='Continue Shopping']");
-	By lnk_viewcart=By.xpath("//div[@class='modal-body']//u[text()='View Cart']");
-	By frm_Addcart=By.id("aswift_1:");
+	private By msg_productconfirm=By.xpath("//div[@class='modal-body']//p[text()='Your product has been added to cart.']");
+	private By btn_continueshop=By.xpath("//div[@class='modal-footer']//button[text()='Continue Shopping']");
+	private By lnk_viewcart=By.xpath("//div[@class='modal-body']//u[text()='View Cart']");
+	private By frm_Addcart=By.id("aswift_1:");
 	
 	public String getproductconfimation() {
-		webdriverwait_visibility(DriverFactory.getinstance().getdriver().findElement(msg_productconfirm),30);
+		webdriverwait_visibility(DriverFactory.getinstance().getdriver().findElement(msg_productconfirm),60);
 		return gettext(DriverFactory.getinstance().getdriver().findElement(msg_productconfirm),"AddProduct_Confirmation");
 	}
 

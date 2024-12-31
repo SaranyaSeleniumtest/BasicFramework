@@ -22,12 +22,15 @@ public class ExtentFactory {
 	//objects will be stored in internal thread local in hashmap
 	ThreadLocal<ExtentTest> extenttest= new ThreadLocal<ExtentTest>();
 	
-	public ExtentTest getextent() {
-		return extenttest.get();
-	}
+	
 	public void setextent(ExtentTest extenttestobj) {
 		extenttest.set(extenttestobj);
 	}
+	
+	public ExtentTest getextent() {
+		return extenttest.get();
+	}
+	
 	
 	public void removeExtentobj() {
 		extenttest.remove();
