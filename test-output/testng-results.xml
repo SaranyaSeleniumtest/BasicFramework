@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-12-28T16:25:15 IST" name="SmokeTest" finished-at="2024-12-28T16:25:35 IST" duration-ms="19700">
+  <suite started-at="2025-01-19T17:33:50 IST" name="SmokeTest" finished-at="2025-01-19T17:34:15 IST" duration-ms="25221">
     <groups>
     </groups>
-    <test started-at="2024-12-28T16:25:15 IST" name="Chrometest" finished-at="2024-12-28T16:25:35 IST" duration-ms="19700">
-      <class name="com.OrangeHRM.testcases.Logintest">
-        <test-method is-config="true" signature="launchapp(java.lang.String)[pri:0, instance:com.OrangeHRM.testcases.Logintest@25d3cfc8]" started-at="2024-12-28T16:25:16 IST" name="launchapp" finished-at="2024-12-28T16:25:26 IST" duration-ms="10811" status="PASS">
+    <test started-at="2025-01-19T17:33:50 IST" name="Chrometest" finished-at="2025-01-19T17:34:15 IST" duration-ms="25221">
+      <class name="com.OrangeHRM.testcases.Loginpagetest">
+        <test-method is-config="true" signature="launchapp(java.lang.String)[pri:0, instance:com.OrangeHRM.testcases.Loginpagetest@67dba613]" started-at="2025-01-19T17:33:50 IST" name="launchapp" finished-at="2025-01-19T17:34:03 IST" duration-ms="12459" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,22 +18,64 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchapp -->
-        <test-method signature="TC001_logintest(java.lang.Object)[pri:0, instance:com.OrangeHRM.testcases.Logintest@25d3cfc8]" started-at="2024-12-28T16:25:26 IST" name="TC001_logintest" data-provider="lgdata" finished-at="2024-12-28T16:25:33 IST" duration-ms="7045" status="PASS">
+        <test-method signature="Verifylogin(java.lang.Object)[pri:0, instance:com.OrangeHRM.testcases.Loginpagetest@67dba613]" started-at="2025-01-19T17:34:03 IST" name="Verifylogin" data-provider="login" finished-at="2025-01-19T17:34:12 IST" duration-ms="8951" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{Email=vprsaran@gmail.com, Tabtitle=Automation Exercise - Checkout, Tabnames=Cart, Password=Testing@123}]]>
+                <![CDATA[{message=Welcome to the Secure Area. When you are done click logout below., pass=SuperSecretPassword!, user=practice}]]>
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: null
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.fail(Assert.java:116)
+at com.OrangeHRM.Utilities.ActionEngine.click(ActionEngine.java:76)
+at com.OrangeHRM.pageobjects.Loginpage2.loginapp(Loginpage2.java:21)
+at com.OrangeHRM.testcases.Loginpagetest.Verifylogin(Loginpagetest.java:25)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC001_logintest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.OrangeHRM.testcases.Logintest@25d3cfc8]" started-at="2024-12-28T16:25:33 IST" name="teardown" finished-at="2024-12-28T16:25:35 IST" duration-ms="1484" status="PASS">
+        </test-method> <!-- Verifylogin -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.OrangeHRM.testcases.Loginpagetest@67dba613]" started-at="2025-01-19T17:34:15 IST" name="teardown" finished-at="2025-01-19T17:34:15 IST" duration-ms="618" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- com.OrangeHRM.testcases.Logintest -->
+      </class> <!-- com.OrangeHRM.testcases.Loginpagetest -->
     </test> <!-- Chrometest -->
   </suite> <!-- SmokeTest -->
 </testng-results>

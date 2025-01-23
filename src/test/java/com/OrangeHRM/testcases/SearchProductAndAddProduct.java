@@ -11,6 +11,7 @@ import com.OrangeHRM.Utilities.ExcelOperations;
 import com.OrangeHRM.Utilities.ExtentFactory;
 import com.OrangeHRM.pageobjects.AddProductpage;
 import com.OrangeHRM.pageobjects.AllTabsPage;
+import com.OrangeHRM.pageobjects.Checkoutpage;
 import com.OrangeHRM.pageobjects.Loginpage;
 import com.OrangeHRM.pageobjects.ViewCartpage;
 import com.OrangeHRM.pageobjects.Productpage;
@@ -29,15 +30,15 @@ public class SearchProductAndAddProduct extends testBase_old {
 	//	7. Verify 'SEARCHED PRODUCTS' is visible
 	//	8. Verify all the products related to search are visible
 
+
+	ExcelOperations excelopt = new ExcelOperations("AddProduct");
 	Loginpage lp= new Loginpage();
 	AllTabsPage tabs= new AllTabsPage();
 	Productpage pdt= new Productpage();
-	AddProductpage addpdt= new AddProductpage();
 	Shoppingcartpage shopcart= new Shoppingcartpage();
+	AddProductpage addpdt = new AddProductpage();
 	ViewCartpage pdtcheckout= new ViewCartpage();
 	
-	ExcelOperations excelopt = new ExcelOperations("AddProduct");
-
 	@Test(dataProvider="AddProduct",groups ={"functional"})
 	public void TC05_SearchandAddpdt(Object obj) throws IOException, InterruptedException {
 		//End to End flow---saranya

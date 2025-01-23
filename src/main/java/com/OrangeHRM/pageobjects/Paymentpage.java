@@ -19,6 +19,12 @@ public class Paymentpage extends testBase {
 	By txt_yearexpiry=By.name("expiry_year");
 	By btn_confirmorder=By.id("submit");
 	
+	private Paymentpage() {
+		
+	}
+	
+	
+	
 	
 	
 	public void validatepaymentpage() {

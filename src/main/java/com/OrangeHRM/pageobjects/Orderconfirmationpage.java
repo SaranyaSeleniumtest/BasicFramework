@@ -12,10 +12,18 @@ public class Orderconfirmationpage extends testBase {
 	By msg_confirm=By.xpath("//h2[@class='title text-center']/following-sibling::p");
 	By btn_continue=By.linkText("Continue");
 	
-	public String getOrderconfirmation() {
-		return gettext(DriverFactory.getinstance().getdriver().findElement(msg_confirm),"Orderconfirm");
+	
+	private Orderconfirmationpage() {
 		
 	}
+	
+//	public static Orderconfirmationpage
+	
+	
+//	public String getOrderconfirmation() {
+//		return gettext(DriverFactory.getinstance().getdriver().findElement(msg_confirm),"Orderconfirm");
+//		
+//	}
 	
 	public void clickcontinue() {
 		click(DriverFactory.getinstance().getdriver().findElement(btn_continue),"continue");

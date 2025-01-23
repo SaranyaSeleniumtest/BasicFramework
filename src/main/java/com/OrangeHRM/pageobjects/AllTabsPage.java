@@ -22,6 +22,8 @@ public class AllTabsPage extends testBase_old {
 	By txt_subscription = By.id("susbscribe_email");
 	By scrol_arrow= By.id("scrollUp");
 	
+	
+	
 	//Methods
 
 	public boolean checkbtn() {

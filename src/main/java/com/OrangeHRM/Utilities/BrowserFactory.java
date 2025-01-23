@@ -2,15 +2,13 @@ package com.OrangeHRM.Utilities;
 
 import java.io.IOException;
 import java.net.URL;
-import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-
-import com.aventstack.extentreports.Status;
 
 public class BrowserFactory {
 // browser detail is passed from config file
@@ -48,14 +46,16 @@ public class BrowserFactory {
 			
 			ChromeOptions opt=new ChromeOptions();
 			
-			opt.addArguments("--incognito");
+//			opt.addArguments("--incognito");
+			//to block notification
+			opt.addArguments("--disable-notifications");
 	//		ExtentFactory.getinstance().getextent().log(Status.PASS,"Driver: "+ browser+ " is set successfully");
 			driver.manage().window().maximize();
 			
 			
 		}
-		else if(browser.equalsIgnoreCase("firefox")) {
-			
+		else if(browser.equalsIgnoreCase("edge")) {
+			driver= new EdgeDriver();
 		}
 		
 		return driver;

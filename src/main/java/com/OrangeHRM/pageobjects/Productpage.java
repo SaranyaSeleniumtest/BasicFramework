@@ -27,6 +27,9 @@ public class Productpage extends testBase_old {
 	By lnk_addpdt=By.linkText("Add to cart");
 
 	
+	
+
+	
 	public boolean verifytitle() {
 		
 		return isdisplayed(DriverFactory.getinstance().getdriver().findElement(title_pdt),"Productpage");

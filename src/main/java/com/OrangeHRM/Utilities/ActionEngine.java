@@ -32,7 +32,7 @@ public class ActionEngine {
 		try {
 			JavascriptExecutor executor = (JavascriptExecutor) DriverFactory.getinstance().getdriver();
 			//executor.executeScript("arguments[0].scrollIntoView(true);", ele);
-			executor.executeScript("javascript:window.scrollBy(250,700)");
+			executor.executeScript("javascript:window.scrollBy(250,"+axes+")");
 			ExtentFactory.getinstance().getextent().log(Status.PASS,  " scrolled successfully");
 		}catch(Exception e) {
 			ExtentFactory.getinstance().getextent().log(Status.FAIL, " not scrolled due to exception " +e);

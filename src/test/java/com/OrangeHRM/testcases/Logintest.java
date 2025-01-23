@@ -13,11 +13,11 @@ import com.testBase.testBase_old;
 
 public class Logintest extends testBase {
 	//This s login-saranyacode
-	Loginpage lp= new Loginpage();
+//	Loginpage lp= new Loginpage();
 	ExcelOperations excelopt= new ExcelOperations("Login");
+	Loginpage lp= new Loginpage();
 	
-	
-	@Test(dataProvider="lgdata")
+	@Test(dataProvider="lgdata",groups= {"smoke"})
 	public void TC001_logintest(Object obj1) throws InterruptedException {
 		HashMap<String,String> hm= (HashMap<String,String>)obj1;
 		lp.loginapp(hm);

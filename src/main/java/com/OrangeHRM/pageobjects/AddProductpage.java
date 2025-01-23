@@ -15,6 +15,8 @@ public class AddProductpage extends testBase_old {
 	private By lnk_viewcart=By.xpath("//div[@class='modal-body']//u[text()='View Cart']");
 	private By frm_Addcart=By.id("aswift_1:");
 	
+	
+	
 	public String getproductconfimation() {
 		webdriverwait_visibility(DriverFactory.getinstance().getdriver().findElement(msg_productconfirm),60);
 		return gettext(DriverFactory.getinstance().getdriver().findElement(msg_productconfirm),"AddProduct_Confirmation");

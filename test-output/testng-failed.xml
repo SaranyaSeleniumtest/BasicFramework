@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite parallel="methods" name="Failed suite [SmokeTest]" guice-stage="DEVELOPMENT">
+<suite name="Failed suite [SmokeTest]" guice-stage="DEVELOPMENT">
   <parameter name="browser" value="chrome"/>
   <listeners>
     <listener class-name="com.OrangeHRM.Utilities.ListnersManager"/>
   </listeners>
-  <test thread-count="5" parallel="methods" name="Chrometest(failed)">
+  <test thread-count="5" name="Chrometest(failed)">
     <classes>
-      <class name="com.OrangeHRM.testcases.Scrolltest">
+      <class name="com.OrangeHRM.testcases.Loginpagetest">
         <methods>
+          <include name="Verifylogin" invocation-numbers="0"/>
           <include name="launchapp"/>
           <include name="teardown"/>
-          <include name="verifyscrollpage" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.OrangeHRM.testcases.Scrolltest -->
+      </class> <!-- com.OrangeHRM.testcases.Loginpagetest -->
     </classes>
   </test> <!-- Chrometest(failed) -->
 </suite> <!-- Failed suite [SmokeTest] -->

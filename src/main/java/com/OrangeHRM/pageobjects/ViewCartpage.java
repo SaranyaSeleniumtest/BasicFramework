@@ -11,7 +11,7 @@ public class ViewCartpage extends testBase {
 	
 	//INTERVIEW XPATH AXES
 	By breadcrum_checkout=By.xpath("//div[@class='breadcrumbs']//a[text()='Home']//parent::li//following-sibling::li");
-	
+
 	public String getproductdetails(String description,String tblcompare) {
 		//String xpath="//table[@id='cart_info_table']//td//a[text()='Blue Top']//ancestor::td/following-sibling::td[@class='cart_price'"
 		

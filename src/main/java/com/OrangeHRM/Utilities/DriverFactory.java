@@ -2,7 +2,7 @@ package com.OrangeHRM.Utilities;
 
 import org.openqa.selenium.WebDriver;
 
-public class DriverFactory {
+public final class DriverFactory {
 	
 	//private constructor , object should not be created outside this class
 	private DriverFactory() {
